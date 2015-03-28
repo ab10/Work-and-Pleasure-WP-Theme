@@ -17,10 +17,8 @@ License URI:
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 /* Html */
-html { overflow-x: hidden; overflow-y: auto; height: 100%; }
-
 /* Tags */
-html, body, div, span, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; outline: 0; font: inherit; font-size: 100%; font-style: normal; vertical-align: baseline; background: transparent; }
+html, body, div, span, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; outline: 0; font: inherit; font-size: 14px; font-style: normal; vertical-align: baseline; background: transparent; }
 
 /* Body */
 body { line-height: 1; font-size: 100%; position: relative; width: 100%; height: 100%; }
@@ -128,7 +126,7 @@ p, ul, ol, dl, blockquote, hr, pre, hgroup, table { margin: 0; }
 /* Links */
 a { text-decoration: none; -webkit-transition: all 0.25s linear; -moz-transition: all 0.25s linear; -ms-transition: all 0.25s linear; -o-transition: all 0.25s linear; transition: all 0.25s linear; color: #808080; }
 
-a:hover, a:active, a:visited { text-decoration: none; }
+a:hover, a:active, a:visited { text-decoration: none; border: none; color: inherit; }
 
 a img { display: block; margin: 0; padding: 0; }
 
@@ -274,7 +272,7 @@ Columns
 @font-face { font-family: 'Minion'; src: url("fonts/minionpro-regular-webfont.eot"); src: url("fonts/minionpro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/minionpro-regular-webfont.woff") format("woff"), url("fonts/minionpro-regular-webfont.ttf") format("truetype"), url("fonts/minionpro-regular-webfont.svg#MinionProRegular") format("svg"); font-weight: normal; font-style: normal; }
 body { font-family: 'proxima_nova_rgregular', sans-serif; color: gray; }
 
-header { text-align: center; margin: 0 auto; margin-bottom: 25px; position: relative; font-size: 100%; top: 0; width: 100%; }
+header { text-align: center; margin: 0 auto; margin-bottom: 25px; position: relative; font-size: 100%; top: 0; width: 100%; padding-top: 40px; }
 header .access { margin-top: 18px; padding-right: 0; }
 header .access div.langswitch { text-transform: uppercase; color: #898989; font-size: 75%; position: relative; z-index: 1005; }
 header .access div.langswitch span { position: absolute; top: 6px; right: 14px; z-index: 2000; }
@@ -288,11 +286,28 @@ header .access div.langswitch ul li a:hover { color: white; background-color: #8
 header .top { position: relative; padding: 0 0 20px 0; }
 header .top .logo { float: none; text-indent: -9999px; width: 348px; height: 69px; background-image: url(images/logo.jpg); display: inline-block; margin: 0 auto; }
 header nav { border-top: 1px solid black; border-bottom: 1px solid black; padding: 16px; background-color: white; position: relative; }
-header nav li { margin: 0 20px; }
-header nav li a { color: #808080; font-size: 90%; text-transform: uppercase; font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; }
+header nav li { margin: 0 48px; }
+header nav li a { color: #808080; font-size: 1rem; text-transform: uppercase; font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; }
 header nav li:hover a, header nav li.current-menu-item a { color: #1a1a1a; }
 header nav li .sub-menu { display: none; }
 header .shop-btn { font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; width: 60px; font-size: 75%; margin-top: 18px; text-transform: uppercase; color: #b7b7b7; border: 1px solid #b7b7b7; padding: 0.6em 1em; }
 header .shop-btn:hover { background-color: #b7b7b7; color: white; }
 
 footer { width: 100%; border-top: 3px solid #bdbcbc; padding: 20px; }
+
+.cat-head { text-align: center; padding-top: 20px; padding-bottom: 30px; }
+.cat-head h1 { padding-top: 8px; font-size: 31px; color: black; font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; text-transform: uppercase; }
+.cat-head h3 { font-size: 14px; color: black; font-family: 'MinionItalic', 'Times New Roman'; font-weight: normal; padding-top: 8px; }
+
+.thumb-grid { display: flex; text-align: center; }
+
+.story-thumb { width: 346px; display: inline-block; margin-bottom: 3rem; }
+.story-thumb img { margin-bottom: 8px; }
+.story-thumb:nth-child(3n+0) { margin: 0 0 0 auto; }
+.story-thumb:nth-child(3n+2) { margin: 0 auto; }
+.story-thumb h2 { font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; color: black; font-size: 1.4rem; margin: 8px auto 6px; text-transform: uppercase; }
+.story-thumb .excerpt { font-family: 'Minion', 'Times New Roman'; font-weight: normal; color: black; font-size: 1rem; line-height: 1rem; margin-bottom: 8px; }
+.story-thumb .tags { padding: 8px 0 0; margin-bottom: 12px; }
+.story-thumb .tags li a { background-color: #959595; color: white !important; font-family: 'proxima_nova_rgregular', 'Arial'; font-weight: normal; margin: 0 2px; padding: 2px 3px; }
+.story-thumb .dot-irecommendthis span { font-size: 1.1rem; font-family: 'proxima_nova_rgregular', 'Arial'; font-weight: normal; }
+.story-thumb .dot-irecommendthis:before { font-size: 1.4rem; content: '\f087'; font-family: 'FontAwesome'; margin-right: 0.3rem; top: 1px; position: relative; }
