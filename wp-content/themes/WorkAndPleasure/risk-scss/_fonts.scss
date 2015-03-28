@@ -1,0 +1,101 @@
+/* Fonts */
+//////////////
+
+
+//
+//
+// Proxima Nova
+//
+//
+
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: font-url('fonts/proximanova-bold-webfont.eot');
+  src: font-url('fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('fonts/proximanova-bold-webfont.woff') format('woff'),
+       font-url('fonts/proximanova-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novalight';
+  src: font-url('fonts/proximanova-light-webfont.eot');
+  src: font-url('fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('fonts/proximanova-light-webfont.woff') format('woff'),
+       font-url('fonts/proximanova-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: font-url('fonts/proximanova-regular-webfont.eot');
+  src: font-url('fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('fonts/proximanova-regular-webfont.woff') format('woff'),
+       font-url('fonts/proximanova-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novasemibold';
+  src: font-url('fonts/proximanova-semibold-webfont.eot');
+  src: font-url('fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('fonts/proximanova-semibold-webfont.woff') format('woff'),
+       font-url('fonts/proximanova-semibold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+//
+//
+// Minion
+//
+//
+@font-face {
+  font-family: 'MinionBold';
+  src: font-url('minionpro-bold-webfont.eot');
+  src: font-url('minionpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('minionpro-bold-webfont.woff') format('woff'),
+  font-url('minionpro-bold-webfont.ttf') format('truetype'),
+  font-url('minionpro-bold-webfont.svg#MinionProBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MinionBoldItalic';
+  src: font-url('minionpro-boldit-webfont.eot');
+  src: font-url('minionpro-boldit-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('minionpro-boldit-webfont.woff') format('woff'),
+  font-url('minionpro-boldit-webfont.ttf') format('truetype'),
+  font-url('minionpro-boldit-webfont.svg#MinionProBoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MinionItalic';
+  src: font-url('minionpro-it-webfont.eot');
+  src: font-url('minionpro-it-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('minionpro-it-webfont.woff') format('woff'),
+  font-url('minionpro-it-webfont.ttf') format('truetype'),
+  font-url('minionpro-it-webfont.svg#MinionProItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Minion';
+  src: font-url('minionpro-regular-webfont.eot');
+  src: font-url('minionpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('minionpro-regular-webfont.woff') format('woff'),
+  font-url('minionpro-regular-webfont.ttf') format('truetype'),
+  font-url('minionpro-regular-webfont.svg#MinionProRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
