@@ -1,4 +1,10 @@
+$dark-text: #1a1a1a;
+$text: #808080;
+
 @import "reset";
 @import "fonts";
+body {font-family: 'proxima_nova_rgregular', sans-serif; color: $text;}
+@import "header";
 
-body {font-family: 'proxima_nova_rgregular';}
+
+

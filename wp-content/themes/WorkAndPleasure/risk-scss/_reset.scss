@@ -5,8 +5,8 @@ Description: 	Risk Made in Warsaw Magazine Responsive Wordpress Theme
 Version: 		1.0
 Author: 		Michael Abtan
 Author URI: 	http://mikiabtan.com
-License: 		
-License URI: 	
+License:
+License URI:
 ====================================================================================================
 
 ====================================================================================================
@@ -143,13 +143,14 @@ sub { top: 0.5ex; }
 p, ul, ol, dl, blockquote, hr, pre, hgroup, table { margin: 0; }
 
 /* Links */
-a { 
+a {
 	text-decoration: none;
 	-webkit-transition: all 0.25s linear;
 	-moz-transition: all 0.25s linear;
 	-ms-transition: all 0.25s linear;
 	-o-transition: all 0.25s linear;
 	transition: all 0.25s linear;
+	color: #808080;
 }
 a:hover,
 a:active,
@@ -170,7 +171,7 @@ a.underline,
 	padding: 2px 0 0;
 	background-color: transparent;
 	border-bottom: 1px solid;
-	
+
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
 	-ms-transition: all 0.3s linear;
@@ -190,7 +191,7 @@ a.underline-hover,
 	padding: 2px 0 0 0;
 	background-color: transparent;
 	border-bottom: 1px solid transparent;
-	
+
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
 	-ms-transition: all 0.3s linear;
