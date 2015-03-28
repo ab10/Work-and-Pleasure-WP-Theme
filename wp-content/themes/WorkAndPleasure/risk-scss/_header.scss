@@ -6,6 +6,7 @@ header {
 	font-size: 100%;
 	top: 0;
 	width: 100%;
+	padding-top: 40px;
 	.access {
 	margin-top: 18px;
 	padding-right: 0;
@@ -68,10 +69,10 @@ header {
 		background-color: white;
 		position: relative;
 		li {
-			margin: 0 20px;
+			margin: 0 48px;
 			a {
 				color: #808080;
-				font-size: 90%;
+				font-size: 1rem;
 				text-transform: uppercase;
 				@include font-proxima('semi');
 			}
