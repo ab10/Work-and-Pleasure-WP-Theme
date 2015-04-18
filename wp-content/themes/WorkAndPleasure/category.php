@@ -36,64 +36,14 @@ get_header(); ?>
 </div>
 	<div class="thumb-grid">
 		<ul>
-
-
-		<li class="story-thumb col-sm-4">
-			<a href="#">
-			<?php echo remove_width_attribute(get_the_post_thumbnail(get_the_ID(), 'my-thumbnail', array( 'class' => 'img-responsive transition-fast' )));?>
-			</a>
-			<p class="quote transition-fast">„Ebistiunt apis net dem qui offic aboria delluptatem remod quibus”<span>Loremis ipsumer</span></p>
-			<?php	the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
-			<a href="<?php the_permalink()?>">
-				<h2><?php the_title();?></h2>
-				<p class="excerpt">Eperiame nihiliquam ipsuscius dolore nihiliquam
-ipsuscius dolo loremis arter are clock </p>
-			</a>
-			<aside class="like-meter">
-				<i class="fa fa-facebook-official"></i> 136 &nbsp;&nbsp;
-				<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
-			</aside>
-		</li>
-		<li class="story-thumb col-sm-4">
-			<a href="#">
-			<?php echo remove_width_attribute(get_the_post_thumbnail(get_the_ID(), 'my-thumbnail', array( 'class' => 'img-responsive transition-fast' )));?>
-			</a>
-			<p class="quote transition-fast">„Ebistiunt apis net dem qui offic aboria delluptatem remod quibus” </p>
-			<?php	the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
-			<a href="<?php the_permalink()?>">
-				<h2><?php the_title();?></h2>
-				<p class="excerpt">Eperiame nihiliquam ipsuscius dolore nihiliquam
-ipsuscius dolo loremis arter are clock </p>
-			</a>
-			<aside class="like-meter">
-				<i class="fa fa-facebook-official"></i> 136 &nbsp;&nbsp;
-				<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
-			</aside>
-		</li>
-		<li class="story-thumb col-sm-4">
-			<a href="#">
-			<?php echo remove_width_attribute(get_the_post_thumbnail(get_the_ID(), 'my-thumbnail', array( 'class' => 'img-responsive transition-fast' )));?>
-			</a>
-			<p class="quote transition-fast">„Ebistiunt apis net dem qui offic aboria delluptatem remod quibus” </p>
-			<?php	the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
-			<a href="<?php the_permalink()?>">
-				<h2><?php the_title();?></h2>
-				<p class="excerpt">Eperiame nihiliquam ipsuscius dolore nihiliquam
-ipsuscius dolo loremis arter are clock </p>
-			</a>
-			<aside class="like-meter">
-				<i class="fa fa-facebook-official"></i> 136 &nbsp;&nbsp;
-				<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
-			</aside>
-		</li>
 <?php
 query_posts('cat='.$cat_id);
 if(have_posts()) :
   while (have_posts()) : the_post();?>
   <li class="story-thumb  col-sm-4">
-			<a href="<?php the_permalink()?>">
-			<?php echo remove_width_attribute(get_the_post_thumbnail(get_the_ID(), 'my-thumbnail', array( 'class' => 'img-responsive' )));?></a>
-			<p class="quote transition-fast">„Ebistiunt apis net dem qui offic aboria delluptatem remod quibus” </p>
+			<a class="thumb" href="<?php the_permalink()?>" style="background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
+				echo $thumb['0'];?>)"></a>
+			<a href="<?php the_permalink()?>"><p class="quote transition-fast">„Ebistiunt apis net dem qui offic aboria delluptatem remod quibus”</p></a>
 			<?php	the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
 			<a href="<?php the_permalink()?>">
 				<h2><?php the_title();?></h2>

@@ -25,10 +25,16 @@ h3 {
 	display: table-cell;
 	padding-bottom: 3rem;
 	&:hover {
-		img {opacity: 0.5;}
+		a.thumb {opacity: 0.5;}
 		p.quote {opacity: 1;}
 	}
-	img {margin-bottom: 8px;}
+	a.thumb {margin-bottom: 8px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		display: inherit;
+		height: 220px;
+	}
 	&:nth-child(3n+0) {
 		margin: 0 0 0 auto;
 	}

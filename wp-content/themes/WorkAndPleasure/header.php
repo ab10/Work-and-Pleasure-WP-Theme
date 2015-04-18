@@ -28,8 +28,8 @@
 			<aside class="col-sm-2"><a href="http://riskmadeinwarsaw.pl" class="shop-btn pull-left">SHOP</a></aside>
 			<h1 class="col-sm-8 pull-left "><a class="logo" href="<?php echo get_site_url(); ?>">Risk - Work & Pleasure	</a></h1>
 			<aside class="access col-sm-2 pull-right">
-				<div class="langswitch pull-left col-sm-3 col-sm-offset-1"><ul><?php pll_the_languages(array("display_names_as" => 'slug'));?></ul> <span class="fa" style="font-size: 12px;">&#xf0d7;</span></div>
-				<a href="#" class="fa pull-left col-sm-1 col-sm-offset-1" style="margin-right: 0;">&#xf002;</a>
+				<a href="#" class="fa pull-right col-sm-1 col-sm-offset-0" style="margin-right: 0;   margin-top: 4px;">&#xf002;</a>
+				<div class="langswitch pull-right col-sm-6 col-sm-offset-0"><ul><?php pll_the_languages(array("display_names_as" => 'slug'));?></ul> <span class="fa" style="font-size: 12px;padding-right: 6px;">&#xf0d7;</span></div>
 			</aside>
 		</div>
 		<nav class="head-nav hidden-xs row" role="main navigtion">

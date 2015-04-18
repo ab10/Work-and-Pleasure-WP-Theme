@@ -61,9 +61,9 @@ $i = 0;
 if($the_query) :
   foreach ($the_query as $post) : ?>
   <li class="story-thumb  col-sm-4">
-			<a href="<?php the_permalink()?>">
-			<?php echo remove_width_attribute(get_the_post_thumbnail(get_the_ID(), 'my-thumbnail', array( 'class' => 'img-responsive' )));?></a>
-			<p class="quote transition-fast">„Ebistiunt 1apis net dem qui offic aboria delluptatem remod quibus” </p>
+			<a class="thumb" href="<?php the_permalink()?>" style="background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
+				echo $thumb['0'];?>)"></a>
+			<a href="<?php the_permalink()?>"><p class="quote transition-fast">„Ebistiunt apis net dem qui offic aboria delluptatem remod quibus”</p></a>
 			<?php	the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
 			<a href="<?php the_permalink()?>">
 				<h2><?php the_title();?></h2>

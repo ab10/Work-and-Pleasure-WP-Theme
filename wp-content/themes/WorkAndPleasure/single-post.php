@@ -88,20 +88,27 @@
 						<section class="ppl-links col-xs-12">
 							<h3>people mentioned in this story</h3>
 							<?php
-								$post_objects = get_field('real_ppl_in_story');
-								if( $post_objects ): ?>
+								$ids = get_field('real_ppl_in_story', false, false);
+								$query = new WP_Query(array(
+									'post_type'      	=> 'creative_ppl',
+									'post__in'		=> $ids,
+									'post_status'		=> 'any',
+									'orderby'        	=> 'rand',
+								));
+
+								if( $query->have_posts() ): ?>
 								<ul>
 									<?php
-								    foreach( $post_objects as $post):
-										setup_postdata($post);?>
+								    while ( $query->have_posts() ):
+										$query->the_post();?>
 										<li class="">
-											<?php echo remove_width_attribute(get_the_post_thumbnail(get_the_ID(), 'person', array( 'class' => 'pull-left img-responsive' )));?>
+											<?php echo (get_the_post_thumbnail(get_the_ID(), array(154,154), array( 'class' => 'pull-left img-responsive' )));?>
 											<div class="pull-right"><h4><?php echo get_the_title();?></h4>
 											<h5><?php echo get_the_excerpt($post);?></h5>
 											<a href="#">View More</a></div>
 										</li>
 										<?php wp_reset_postdata();
-								    endforeach;
+								    endwhile;
 								endif;
 								?>
 

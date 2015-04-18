@@ -304,9 +304,9 @@ h3 { font-size: 14px; color: black; font-family: 'MinionItalic', 'Times New Roma
 .thumb-grid { display: flex; text-align: center; width: 100%; }
 
 .story-thumb { display: table-cell; padding-bottom: 3rem; }
-.story-thumb:hover img { opacity: 0.5; }
+.story-thumb:hover a.thumb { opacity: 0.5; }
 .story-thumb:hover p.quote { opacity: 1; }
-.story-thumb img { margin-bottom: 8px; }
+.story-thumb a.thumb { margin-bottom: 8px; background-repeat: no-repeat; background-size: cover; width: 100%; display: inherit; height: 220px; }
 .story-thumb:nth-child(3n+0) { margin: 0 0 0 auto; }
 .story-thumb:nth-child(3n+2) { margin: 0 auto; }
 .story-thumb p.quote { position: absolute; top: 0; left: 0; padding: 40px 60px; font-family: 'MinionItalic', 'Times New Roman'; font-weight: normal; font-size: 160%; color: black; text-align: center; width: 100%; opacity: 0; line-height: 140%; }
