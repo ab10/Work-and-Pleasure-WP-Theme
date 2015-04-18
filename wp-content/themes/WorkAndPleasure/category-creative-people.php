@@ -38,6 +38,7 @@ get_header(); ?>
 		<ul>
 
 
+<!--
 		<li class="story-thumb col-sm-4">
 			<a href="#">
 			<?php echo remove_width_attribute(get_the_post_thumbnail(get_the_ID(), 'my-thumbnail', array( 'class' => 'img-responsive transition-fast' )));?>
@@ -86,23 +87,22 @@ ipsuscius dolo loremis arter are clock </p>
 				<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
 			</aside>
 		</li>
+-->
 <?php
-query_posts('cat='.$cat_id);
+	$args = array(
+	'numberposts'	=> -1,
+	'post_type'  => 'creative_ppl'
+);
+query_posts($args);
 if(have_posts()) :
   while (have_posts()) : the_post();?>
-  <li class="story-thumb  col-sm-4">
+ 		 <li class="story-thumb  col-sm-3">
 			<a href="<?php the_permalink()?>">
-			<?php echo remove_width_attribute(get_the_post_thumbnail(get_the_ID(), 'my-thumbnail', array( 'class' => 'img-responsive' )));?></a>
-			<p class="quote transition-fast">„Ebistiunt apis net dem qui offic aboria delluptatem remod quibus” </p>
-			<?php	the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
+			<?php echo remove_width_attribute(get_the_post_thumbnail(get_the_ID(), 'person', array( 'class' => 'person img-responsive' )));?></a>
 			<a href="<?php the_permalink()?>">
 				<h2><?php the_title();?></h2>
-				<p class="excerpt"><?php the_field('lead_excerpt_en');?></p>
+				<p class="excerpt"><?php echo get_the_excerpt()?></p>
 			</a>
-			<aside class="like-meter">
-				<i class="fa fa-facebook-official"></i> 136 &nbsp;&nbsp;
-				<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
-			</aside>
 		</li>
   <?php
   endwhile;

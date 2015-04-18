@@ -42,4 +42,64 @@ add_filter('single_template', create_function(
 	return $the_template;' )
 );
 
+
+
+function banner_posts() {
+	register_post_type(
+		'Banner',
+		array(
+			'labels' => array(
+				'name' => 'banners',
+				'singular_name' => 'Banner',
+				'menu_name' => 'Banners',
+				'name_admin_bar'  => 'Banner',
+				'all_items' =>  'All Banner',
+				'add_new' => 'Add Banner',
+				'add_new_item' => 'Add Banner',
+				'edit_item'  => 'Edit Banner',
+				'new_item' => 'Add Banner',
+			),
+			'public' => true,
+			'capability_type' => 'post',
+			'taxonomies' => array('category'),
+			'rewrite' => array('slug' => 'banner'),
+			'supports' => array('title', 'excerpt', 'thumbnail')
+		)
+	);
+}
+add_action( 'init', 'banner_posts' );
+
+function creative_ppl_posts() {
+	register_post_type(
+		'creative_ppl',
+		array(
+			'labels' => array(
+				'name' => 'Creative Pepole',
+				'singular_name' => 'Creative Person',
+				'menu_name' => 'Creative People',
+				'name_admin_bar'  => 'Banner',
+				'all_items' =>  'All People',
+				'add_new' => 'Add Person',
+				'add_new_item' => 'Add Person',
+				'edit_item'  => 'Edit Person',
+				'new_item' => 'Add Person',
+			),
+			'public' => true,
+			'capability_type' => 'post',
+			'taxonomies' => array('category'),
+			'rewrite' => array('slug' => 'creative-pepole'),
+			'supports' => array('title', 'excerpt', 'thumbnail')
+		)
+	);
+}
+add_action( 'init', 'creative_ppl_posts' );
+
+
+function add_scripts() {
+    echo '<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>';
+    echo '<script src="'.get_template_directory_uri().'/js/bootstrap.min.js" type="text/javascript"></script>';
+	echo '<script src="'.get_template_directory_uri().'/js/functions.js" type="text/javascript"></script>';
+}
+add_action('wp_footer', 'add_scripts');
+
 ?>
