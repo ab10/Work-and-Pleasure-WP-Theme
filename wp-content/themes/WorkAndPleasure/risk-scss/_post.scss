@@ -1,0 +1,111 @@
+.story-header {
+	img {width: 100%; margin-bottom: 20px;}
+	margin-bottom: 0;
+}
+.post-title {
+	border-bottom: 1px solid black;
+	text-align: left;
+	margin: 0;
+	padding-top: 0;
+	margin-bottom: 30px;
+	.credits {
+		@include font-minion('italic');
+		color: #333333;
+		margin: 12px 0 22px;
+		span {
+			@include font-minion();
+			margin-right: 12px;
+		}
+		span.date {
+			@include font-proxima('semi');
+			color: black;
+		}
+	}
+}
+.story-icon {
+	width: 60px;
+}
+.story-content {
+	  width: 645px;
+	  .like-meter {margin-top: 14px;}
+}
+.wp-caption-text {
+	@include font-minion('bolditalic');
+	line-height: 130%;
+	padding-top: 8px;
+	padding-right: 8px;
+}
+p {
+	@include post-style;
+	strong {@include font-proxima('bold');}
+}
+.side-bar {
+	padding-top: 116px;
+	img {width: 100%;}
+}
+.banner {
+	@include bottom-space;
+}
+.to-top {
+	@include font-minion;
+	color: black;
+	background: transparent;
+	margin-top: 20px;
+}
+.teaser {
+	width: 100%;
+	min-height: 232px;
+	border: 4px solid #d0d0d0;
+	text-align: center;
+	padding: 30px 20px;
+	@include bottom-space;
+	ul.tags li a {font-size: 80%;}
+	p {
+		padding-bottom: 8px;
+		&.quote {
+			font-size: 170%;
+			@include font-minion('italic');
+			line-height: 120%;
+			margin-top: 15px;
+		}
+		&.sec {text-transform: uppercase; font-size: 80%;}
+	}
+	a {
+		&.readmore {text-transform: uppercase; color: black; text-decoration: underline; -moz-text-decoration-color: #d0d0d0; text-decoration-color: #d0d0d0;  font-size: 70%;}
+	}
+}
+.ppl-links {
+	h3 {
+		@include font-proxima('semi');
+		color: #333333;
+		text-transform: uppercase;
+		font-size: 100%;
+		margin-bottom: 4px;
+
+	}
+	ul {
+		padding-top: 20px;
+		li {
+			display: inline-block;
+			margin-right: 45px;
+			img {border-radius: 999px; margin-right: 15px;}
+			h4 {
+				@include font-minion('bold');
+				font-size: 130%;
+				color: black;
+				margin-bottom: 4px;
+				padding-top: 25px;
+				text-transform: capitalize;
+
+			}
+			h5 {
+				@include font-proxima('semi');
+				font-size: 80%;
+				color: black;
+				margin-bottom: 25px;
+				text-transform: capitalize;
+			}
+			a {text-transform: uppercase; color: black; text-decoration: underline; font-size: 90%;}
+		}
+	}
+}

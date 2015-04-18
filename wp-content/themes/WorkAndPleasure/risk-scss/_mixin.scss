@@ -1,0 +1,11 @@
+@mixin post-style($style: 'semi') {
+	@include font-proxima($style);
+	font-size: 100%;
+	color: black;
+	line-height: 180%;
+	padding-bottom: 18px;
+}
+
+@mixin bottom-space($height: 15px) {
+	margin-bottom: $height;
+}

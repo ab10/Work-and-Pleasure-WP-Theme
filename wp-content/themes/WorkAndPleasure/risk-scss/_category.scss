@@ -1,20 +1,20 @@
+h1 {
+	padding-top: 8px;
+	font-size: 31px;
+	color: black;
+	@include font-proxima('semi');
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 14px;
+	color: black;
+	@include font-minion('italic');
+	padding-top: 8px;
+}
 .cat-head {
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 30px;
-	h1 {
-		padding-top: 8px;
-		font-size: 31px;
-		color: black;
-		@include font-proxima('semi');
-		text-transform: uppercase;
-	}
-	h3 {
-		font-size: 14px;
-		color: black;
-		@include font-minion('italic');
-		padding-top: 8px;
-	}
 }
 .thumb-grid {
 	display: flex;
@@ -45,29 +45,30 @@
 		line-height: 1rem;
 		margin-bottom: 8px;
 	}
-	.tags {
-		padding: 8px 0 0;
-		margin-bottom: 12px;
-		li a {
-			background-color: #959595;
-			color: white !important;
-			@include font-proxima();
-			margin: 0 2px;
-			padding: 2px 3px;
-		}
+}
+.tags {
+	padding: 8px 0 0;
+	margin-bottom: 12px;
+	li a {
+		background-color: #959595;
+		color: white !important;
+		@include font-proxima();
+		margin: 0 4px 0 0;
+		padding: 2px 4px;
+		text-transform: uppercase;
 	}
-	.dot-irecommendthis {
-		span {
-			font-size: 1.1rem;
-			@include font-proxima();
-		}
-		&:before {
-			font-size: 1.4rem;
-			content: '\f087';
-			font-family: 'FontAwesome';
-			margin-right: 0.3rem;
-			top: 1px;
-			position: relative;
-		}
+}
+.dot-irecommendthis {
+	span {
+		font-size: 1.1rem;
+		@include font-proxima();
+	}
+	&:before {
+		font-size: 1.4rem;
+		content: '\f087';
+		font-family: 'FontAwesome';
+		margin-right: 0.3rem;
+		top: 1px;
+		position: relative;
 	}
 }
