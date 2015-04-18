@@ -109,3 +109,18 @@ p {
 		}
 	}
 }
+
+.person {
+	text-align: center;
+  margin: 0 auto;
+  border-radius: 999px;
+  max-width: 153px;
+  max-height: 153px;
+  min-height: 153px;
+  height: 100%;
+}
+
+.person-head {
+	h1 {@include font-minion('regular');}
+	h3 {padding: 0; p {@include font-minion('italic');}}
+}

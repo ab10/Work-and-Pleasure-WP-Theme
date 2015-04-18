@@ -96,6 +96,7 @@
 						</section>
 						<div class="clearfix"></div>
 						<hr style=" color: #1d1d1b; border-color:#1d1d1b; width: 100%; margin: 40px auto;">
+						<?php comments_template();?>
 					</div>
 					<h1></h1>
 					<?php

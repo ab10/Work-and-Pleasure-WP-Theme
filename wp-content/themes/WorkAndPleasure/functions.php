@@ -9,6 +9,7 @@ function register_my_menus() {
 
 function baw_theme_setup() {
   add_image_size( 'my-thumbnail', 346, 238, true );
+  add_image_size( 'person', 154, 154, true );
   add_image_size( 'img-in-story', 645 );
 }
 
@@ -32,5 +33,13 @@ add_action( 'after_setup_theme', 'baw_theme_setup' );
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
+
+add_filter('single_template', create_function(
+	'$the_template',
+	'foreach( (array) get_the_category() as $cat ) {
+		if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") )
+		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
+	return $the_template;' )
+);
 
 ?>
