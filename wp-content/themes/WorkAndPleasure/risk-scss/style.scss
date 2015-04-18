@@ -3,9 +3,11 @@ $text: #808080;
 
 @import "reset";
 @import "fonts";
+@import "mixin";
 body {font-family: 'proxima_nova_rgregular', sans-serif; color: $text;}
 @import "header";
 @import "category";
+@import "post";
 
 
 

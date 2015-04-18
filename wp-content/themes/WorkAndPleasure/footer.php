@@ -9,7 +9,7 @@
  */
 ?>
 <footer>
-	<div class="container no-padding">
+	<div class="container ">
 		<p class="copyrights pull-left">All content © Risk Made In Warsaw 2014</p>
 		<p class="follow-us pull-right">Follow us: <a href="" class="fa-facebook fa"></a> <a href="" class="fa-twitter fa"></a> <a href="" class="fa-pinterest fa"></a> <a href="" class="fa-instagram fa"></a> </p></div>
 </footer>
