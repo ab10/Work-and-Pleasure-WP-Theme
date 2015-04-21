@@ -151,6 +151,7 @@ a {
 	-o-transition: all 0.25s linear;
 	transition: all 0.25s linear;
 	color: #808080;
+	-webkit-animation-fill-mode: forwards;
 }
 a:hover,
 a:active,

@@ -24,16 +24,16 @@ get_header(); ?>
 				<h3 class="row"><?php echo get_field('category_desc', $terms)?></h3>
 			</header>
 		</div>
-		<section class="timeline col-sm-10 pull-left">
-			<p class="pull-left col-sm-2">OLD storieas</p>
-			<p class="float-center col-sm-6 the-line"><i class="fa fa-circle the-scrubber"></i></p>
-			<p class="pull-right col-sm-3">new stories</p>
-		</section>
 <!--
 		<button class="pull-right col-sm-2 transition-fast popular-btn">most popular</button>
 		<button class="pull-right col-sm-2 transition-fast liked-btn">stories i liked</button>
 -->	</div>
 </div>
+<div class="container timeline"><section class="col-sm-7 ">
+	<p class="">OLD stories</p>
+	<p class="the-line"><i class="fa fa-circle the-scrubber"></i></p>
+	<p class="">new stories</p>
+</section></div>
 	<div class="thumb-grid">
 		<ul>
 <?php
@@ -45,7 +45,7 @@ query_posts($args);
 if(have_posts()) :
   while (have_posts()) : the_post();?>
  		 <li class="story-thumb  col-sm-3">
-			<a class="thumb" href="<?php the_permalink()?>" style="background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
+			<a class="thumb person" href="<?php the_permalink()?>" style="background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
 				echo $thumb['0'];?>)"></a>
 			<a href="<?php the_permalink()?>">
 				<h2><?php the_title();?></h2>

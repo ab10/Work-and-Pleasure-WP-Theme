@@ -124,7 +124,7 @@ sub { top: 0.5ex; }
 p, ul, ol, dl, blockquote, hr, pre, hgroup, table { margin: 0; }
 
 /* Links */
-a { text-decoration: none; -webkit-transition: all 0.25s linear; -moz-transition: all 0.25s linear; -ms-transition: all 0.25s linear; -o-transition: all 0.25s linear; transition: all 0.25s linear; color: #808080; }
+a { text-decoration: none; -webkit-transition: all 0.25s linear; -moz-transition: all 0.25s linear; -ms-transition: all 0.25s linear; -o-transition: all 0.25s linear; transition: all 0.25s linear; color: #808080; -webkit-animation-fill-mode: forwards; }
 
 a:hover, a:active, a:visited { text-decoration: none; border: none; color: inherit; }
 
@@ -287,13 +287,56 @@ header .top { position: relative; padding: 0 15px 20px; }
 header .top .logo { float: none; text-indent: -9999px; width: 348px; height: 69px; background-image: url(images/logo.jpg); display: inline-block; margin: 0 auto; }
 header nav { border-top: 1px solid black; border-bottom: 1px solid black; padding: 16px; background-color: white; position: relative; }
 header nav li { margin: 0 48px; }
-header nav li a { color: #808080; font-size: 1rem; text-transform: uppercase; font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; }
+header nav li a { color: #808080; font-size: 1rem; text-transform: uppercase; font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; position: relative; }
 header nav li:hover a, header nav li.current-menu-item a { color: #1a1a1a; }
 header nav li .sub-menu { display: none; }
 header .shop-btn { font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; width: 60px; font-size: 75%; margin-top: 18px; text-transform: uppercase; color: #b7b7b7; border: 1px solid #b7b7b7; padding: 0.6em 1em; }
 header .shop-btn:hover { background-color: #b7b7b7; color: white; }
 
 footer { width: 100%; border-top: 3px solid #bdbcbc; padding: 20px; margin-top: 40px; }
+
+#home-carousel .carousel-inner { height: 580px; }
+#home-carousel .carousel-inner .item { width: 100%; height: 100%; background-size: cover; }
+
+.home-text { position: absolute; top: 0; padding: 14% 0; width: 35%; left: 50%; margin-left: -17.5%; }
+.home-text p { color: white; text-align: center; font-family: 'MinionItalic', 'Times New Roman'; font-weight: normal; text-align: center; width: 100%; font-size: 35px; }
+.home-text p a { font-family: 'Minion', 'Times New Roman'; font-weight: normal; color: white; font-size: 35px; text-decoration: underline; }
+
+.set-wrapper { height: 252px; display: inline-block; border: 1px solid black; text-align: center; margin-right: 52px; overflow: hidden; }
+.set-wrapper.set1 { max-width: 294px; }
+.set-wrapper.set2 { max-width: 440px; }
+.set-wrapper.set3 { max-width: 294px; margin-right: 0; }
+.set-wrapper .square { padding: 0px; width: 146px; height: 126px; overflow: hidden; margin: 0; display: inline-block; float: left; text-align: center; }
+.set-wrapper .square img { height: 100%; width: auto; }
+.set-wrapper .square img:hover { height: 120%; margin-left: -10%; margin-top: -10%; }
+.set-wrapper .square.tit { padding: 20px 10px; text-transform: uppercase; }
+.set-wrapper .square.tit img { width: auto; height: auto; margin: 0 auto; }
+.set-wrapper .square.tit img:hover { height: initial; margin: 0 auto; }
+
+.thumb.person { background-size: cover; height: 220px; border-radius: 100%; background-position: center; width: 220px; }
+
+.home-quotes { text-align: center; padding: 40px; height: 255px; width: 890px; margin: 0 auto; }
+.home-quotes img { display: inline-block; }
+.home-quotes span { display: block; font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; font-size: 90%; }
+.home-quotes .panel { display: inline-block; max-width: 60%; padding: 20px 40px; vertical-align: top; position: relative; top: 8px; left: 40px; border-radius: 0px; margin-left: 10px; width: 636px; height: 154px; }
+.home-quotes .panel:before { content: ''; position: absolute; top: 45px; right: 100%; margin-top: -12px; width: 0; height: 0; border-right: 30px solid #b8b7b7; border-top: 0px solid transparent; border-bottom: 20px solid transparent; content: ' '; }
+.home-quotes .panel:after { content: ''; position: absolute; top: 42px; right: 99.5%; margin-top: -8px; width: 0; height: 0; border-right: 30px solid #ffffff; border-top: 0px solid transparent; border-bottom: 20px solid transparent; }
+.home-quotes .quote { font-family: 'MinionItalic', 'Times New Roman'; font-weight: normal; font-size: 170%; }
+
+.timeline { background: white; z-index: 100; }
+
+.time-fixed-top { position: fixed; top: 36px; }
+
+.timeline { margin: 10px 0; background-color: white; padding: 10px 0; }
+.timeline p { color: black; font-size: 140%; margin: 0; text-transform: lowercase; padding: 0; display: inline-block; margin-right: 10px; font-family: 'MinionItalic', 'Times New Roman'; font-weight: normal; }
+.timeline p.the-line { border-top: 1px solid black; position: relative; top: -4px; width: 50%; }
+
+.popular-btn, .liked-btn { color: #b7b7b7 !important; text-transform: uppercase; border: 1px solid #b7b7b7; padding: 8px 6px 6px; text-align: center; cursor: pointer; background-color: white; line-height: 22px; margin: 22px 0 22px 12px; width: 14%; }
+.popular-btn:hover, .liked-btn:hover { background-color: #b7b7b7; color: white !important; }
+
+.the-scrubber { position: absolute; top: -8px; right: 0px; cursor: pointer; font-size: 80%; }
+
+.qlink { position: absolute; top: 0; left: 0; width: 100%; height: 220px; }
 
 h1 { padding-top: 8px; font-size: 31px; color: black; font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; text-transform: uppercase; }
 
@@ -309,7 +352,7 @@ h3 { font-size: 14px; color: black; font-family: 'MinionItalic', 'Times New Roma
 .story-thumb a.thumb { margin-bottom: 8px; background-repeat: no-repeat; background-size: cover; width: 100%; display: inherit; height: 220px; }
 .story-thumb:nth-child(3n+0) { margin: 0 0 0 auto; }
 .story-thumb:nth-child(3n+2) { margin: 0 auto; }
-.story-thumb p.quote { position: absolute; top: 0; left: 0; padding: 40px 60px; font-family: 'MinionItalic', 'Times New Roman'; font-weight: normal; font-size: 160%; color: black; text-align: center; width: 100%; opacity: 0; line-height: 140%; }
+.story-thumb p.quote { position: absolute; top: 0; left: 0; padding: 0 40px; top: 50%; transform: translateY(-50%); font-family: 'MinionItalic', 'Times New Roman'; font-weight: normal; font-size: 160%; color: black; text-align: center; width: 100%; opacity: 0; line-height: 140%; }
 .story-thumb p.quote span { font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; font-size: 65%; display: block; }
 .story-thumb h2 { font-family: 'proxima_novasemibold', 'Arial'; font-weight: normal; color: black; font-size: 1.4rem; margin: 8px auto 6px; text-transform: uppercase; }
 .story-thumb .excerpt { font-family: 'Minion', 'Times New Roman'; font-weight: normal; color: black; font-size: 1rem; line-height: 1rem; margin-bottom: 8px; padding: 2px 10px; }

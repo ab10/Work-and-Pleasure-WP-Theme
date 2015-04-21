@@ -45,7 +45,9 @@ h3 {
 		position: absolute;
 		top: 0;
 		left: 0;
-		padding: 40px 60px;
+		padding: 0 40px;
+		top: 50%;
+		transform: translateY(-50%);
 		@include font-minion('italic');
 		font-size: 160%;
 		color: black;
