@@ -10,9 +10,9 @@
 ?>
 <div id="search">
     <button type="button" class="close">×</button>
-    <form method="get"  id="searchform" action="<?php bloginfo('home'); ?>/">
-        <input type="search" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" placeholder="type keyword(s) here" />
-        <button type="submit" class="btn btn-primary" id="searchsubmit" value="Search">Search</button>
+    <form method="post"  id="seachform" action="http://localhost/risk/wp-content/themes/WorkAndPleasure/searchform.php">
+        <input type="search" name="some"  placeholder="type keyword(s) here" />
+        <input type="submit" class="btn btn-primary"  value="Search">
     </form>
 </div>
 <footer>
