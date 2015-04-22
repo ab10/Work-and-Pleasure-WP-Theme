@@ -8,6 +8,13 @@
  * @since PEER 1.0
  */
 ?>
+<div id="search">
+    <button type="button" class="close">×</button>
+    <form method="get"  id="searchform" action="<?php bloginfo('home'); ?>/">
+        <input type="search" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" placeholder="type keyword(s) here" />
+        <button type="submit" class="btn btn-primary" id="searchsubmit" value="Search">Search</button>
+    </form>
+</div>
 <footer>
 	<div class="container ">
 		<p class="copyrights pull-left">All content © Risk Made In Warsaw 2014</p>

@@ -41,7 +41,7 @@ function get_comment_author( $comment_ID = 0 ) {
 	 * @param int    $comment_ID The comment ID.
 	 * @param object $comment    The comment object.
 	 */
-	return apply_filters( 'get_comment_author', $author, $comment_ID, $comment );
+	//return apply_filters( 'get_comment_author', $author, $comment_ID, $comment );
 }
 
 /**
@@ -2251,7 +2251,7 @@ function comment_form( $args = array(), $post_id = null ) {
 					do_action( 'comment_form_must_log_in_after' );
 					?>
 				<?php else : ?>
-					<form class="col-sm-4 pull-right comment-form" action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>" <?php echo $html5 ? ' novalidate' : ''; ?>>
+					<form class="col-sm-4 pull-right" action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>" class="comment-form"<?php echo $html5 ? ' novalidate' : ''; ?>>
 						<?php
 						/**
 						 * Fires at the top of the comment form, inside the form tag.

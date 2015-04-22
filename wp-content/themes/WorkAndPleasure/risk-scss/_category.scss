@@ -24,8 +24,11 @@ h3 {
 .story-thumb {
 	display: table-cell;
 	padding-bottom: 3rem;
+	text-align: center;
 	&:hover {
-		a.thumb {opacity: 0.5;}
+		a.thumb {opacity: 0.5; -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari */
+    transform: scale(1.05)}
 		p.quote {opacity: 1;}
 	}
 	a.thumb {margin-bottom: 8px;

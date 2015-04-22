@@ -43,7 +43,7 @@ $t = 0;
 if(have_posts()) :
   while (have_posts()) : the_post();?>
   <li class="story-thumb  col-sm-4">
-			<a class="thumb" href="<?php the_permalink()?>" style="background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
+			<a class="thumb transition-fast" href="<?php the_permalink()?>" style="background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
 				echo $thumb['0'];?>)"></a>
 			<a href="<?php the_permalink()?>" class="qlink"><p class="quote transition-fast">
 				<?php if( have_rows('quote') ):

@@ -111,27 +111,53 @@
 								    endwhile;
 								endif;
 								?>
-
-<!--
-
-								<li class="">
-									<img class="img-reponsive pull-left" src="<?php echo get_site_url()?>/wp-content/uploads/2015/04/untitled-1.jpg"/>
-									<div class="pull-right"><h4>Lorasem ipsumer </h4>
-									<h5>Lom ipsumer </h5>
-									<a href="#">zobacz więcej</a></div>
-								</li>
-								<li class="">
-									<img class="img-reponsive pull-left" src="<?php echo get_site_url()?>/wp-content/uploads/2015/04/untitled-1.jpg"/>
-									<div class="pull-right"><h4>Lorfggfgfm iper </h4>
-									<h5>Lorem ipsumer </h5>
-									<a href="#">zobacz więcej</a></div>
-								</li>
--->
 							</ul>
 						</section>
 						<div class="clearfix"></div>
 						<hr style=" color: #1d1d1b; border-color:#1d1d1b; width: 100%; margin: 40px auto;">
-						<?php comments_template();?>
+						<aside class="related">
+							<ul>
+								<?php
+									$newargs = array(
+										'posts_per_page' => 3,
+										'orderby' => 'rand',
+										'order'   => 'DESC',
+									);
+									 $rel_posts = new WP_Query($newargs);
+									  if($rel_posts->have_posts()) :
+								  while ($rel_posts->have_posts()) : $rel_posts->the_post();?>
+								  <li class="story-thumb  col-sm-4">
+											<a class="thumb transition-fast" href="<?php the_permalink()?>" style="background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
+												echo $thumb['0'];?>)"></a>
+											<a href="<?php the_permalink()?>" class="qlink"><p class="quote transition-fast">
+												<?php if( have_rows('quote') ):
+													while ( have_rows('quote') ) : the_row();
+													        the_sub_field('quote_text');
+															$post_ob = get_sub_field('person');
+															echo "<span>".($post_ob->post_title)."</span>";
+													    endwhile;
+													endif;
+												?></p></a>
+											<?php	the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
+											<a href="<?php the_permalink()?>">
+												<h2><?php the_title();?></h2>
+<!-- 												<p class="excerpt"><?php echo get_the_excerpt();?></p> -->
+												<?php echo the_excerpt();?>
+											</a>
+											<aside class="like-meter">
+												<i class="fa fa-facebook-official"></i> 136 &nbsp;&nbsp;
+												<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
+											</aside>
+										</li>
+								  <?php
+																endwhile;
+								  endif;
+								  wp_reset_postdata();
+								 ?>
+							</ul>
+						</aside>
+						<div class="clearfix"></div>
+						<?php comments_template('');?>
 					</div>
 					<h1></h1>
 					<?php
