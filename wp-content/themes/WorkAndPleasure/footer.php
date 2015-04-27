@@ -8,17 +8,17 @@
  * @since PEER 1.0
  */
 ?>
-<div id="search">
-    <button type="button" class="close">×</button>
-    <form method="post"  id="seachform" action="http://localhost/risk/wp-content/themes/WorkAndPleasure/searchform.php">
-        <input type="search" name="some"  placeholder="type keyword(s) here" />
-        <input type="submit" class="btn btn-primary"  value="Search">
-    </form>
-</div>
+
+<?php get_search_form(); ?>
 <footer>
 	<div class="container ">
 		<p class="copyrights pull-left">All content © Risk Made In Warsaw 2014</p>
-		<p class="follow-us pull-right">Follow us: <a href="" class="fa-facebook fa"></a> <a href="" class="fa-twitter fa"></a> <a href="" class="fa-pinterest fa"></a> <a href="" class="fa-instagram fa"></a> </p></div>
+		<p class="follow-us pull-right">Follow us:
+			<a href="" class="fa-facebook fa"></a>
+			<a href="" class="fa-twitter fa"></a> <a href="" class="fa-pinterest fa"></a>
+			<a href="" class="fa-instagram fa"></a>
+		</p>
+	</div>
 </footer>
 
 <script type="text/javascript">

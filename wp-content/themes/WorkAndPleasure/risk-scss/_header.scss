@@ -302,6 +302,8 @@ footer {
 	transform: translate(0px, -100%) scale(0, 0);
 
     opacity: 0;
+
+    z-index: 1000;
 }
 
 #search.open {
@@ -313,7 +315,7 @@ footer {
     opacity: 1;
 }
 
-#search input[type="search"] {
+#search input[type="text"] {
     position: absolute;
     top: 50%;
     width: 100%;
