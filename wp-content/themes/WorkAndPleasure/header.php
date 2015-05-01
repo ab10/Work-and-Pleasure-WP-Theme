@@ -50,7 +50,7 @@
 		</button>
 	    </div>
 		<div class="head-nav collapse navbar-collapse" role="main navigtion" id="bs-example-navbar-collapse-1">
-			<button type="button" class="close-menu collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<button type="button" class="close-menu collapsed visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 				<span class="sr-only">Back To Top</span>
 				<i class="fa fa-times  visible-xs" ></i>
 			</button>
