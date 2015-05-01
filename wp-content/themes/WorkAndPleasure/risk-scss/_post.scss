@@ -8,25 +8,30 @@
 	margin: 0;
 	padding-top: 0;
 	margin-bottom: 30px;
-	.credits {
+}
+.credits {
+	padding-bottom: 16px;
+	p {
 		@include font-minion('italic');
 		color: #333333;
-		margin: 12px 0 22px;
+		margin: 0;
+		padding: 0;
+		display: block;
 		span {
 			@include font-minion();
 			margin-right: 12px;
 		}
-		span.date {
-			@include font-proxima('semi');
-			color: black;
-		}
+	}
+	span.date {
+		@include font-proxima('semi');
+		color: black;
 	}
 }
 .story-icon {
-	width: 60px;
+	width: 90px;
 }
 .story-content {
-	  width: 645px;
+	  width: 100%;
 	  .like-meter {margin-top: 14px;}
 }
 .wp-caption-text {
@@ -81,14 +86,15 @@ p {
 		text-transform: uppercase;
 		font-size: 100%;
 		margin-bottom: 4px;
-
 	}
 	ul {
 		padding-top: 20px;
+		display: flex;
 		li {
-			display: inline-block;
-			margin-right: 45px;
-			img {border-radius: 999px; margin-right: 15px;}
+			display: block;
+			margin: 0 auto 30px;
+			img {border-radius: 999px; margin-right: 15px; width: 35%;}
+			.details {float: left;}
 			h4 {
 				@include font-minion('bold');
 				font-size: 130%;
@@ -96,7 +102,6 @@ p {
 				margin-bottom: 4px;
 				padding-top: 25px;
 				text-transform: capitalize;
-
 			}
 			h5 {
 				@include font-proxima('semi');
@@ -124,3 +129,4 @@ p {
 	h1 {@include font-minion('regular');}
 	h3 {padding: 0; p {@include font-minion('italic');}}
 }
+#the-post.larger {font-size: 120%;}

@@ -15,25 +15,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/risk-scss/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css?<?php echo time()?>" type="text/css" media="all">
 			<?php wp_head(); ?>
 			<link rel='stylesheet' id='js_composer_front-css'  href='<?php echo get_site_url();?>/wp-content/plugins/js_composer/assets/css/js_composer_front.css?ver=4.2.3' type='text/css' media='all' />
 
 </head>
 <body <?php body_class(); ?>>
-	<header class="main-header row">
-		<div class="top hidden-xs container">
-			<aside class="col-sm-2"><a href="http://riskmadeinwarsaw.pl" class="shop-btn pull-left">SHOP</a></aside>
-			<h1 class="col-sm-8 pull-left "><a class="logo" href="<?php echo get_site_url(); ?>">Risk - Work & Pleasure	</a></h1>
-			<aside class="access col-sm-2 pull-right">
+	<header class="main-header">
+		<div class="top container">
+			<aside class="col-sm-2 hidden-xs"><a href="http://riskmadeinwarsaw.pl" class="shop-btn pull-left">SHOP</a></aside>
+			<h1 class="col-sm-8 col-xs-12 no-margin no-padding pull-left "><a class="logo" href="<?php echo get_site_url(); ?>">Risk - Work & Pleasure	</a></h1>
+			<aside class="access col-sm-2 pull-right hidden-xs">
 				<a href="#search" class="fa pull-right col-sm-1 col-sm-offset-0 search-btn" style="margin-right: 0;   margin-top: 4px;">&#xf002;</a>
 				<div class="langswitch pull-right col-sm-6 col-sm-offset-0"><ul><?php pll_the_languages(array("display_names_as" => 'slug'));?></ul> <span class="fa" style="font-size: 12px;padding-right: 6px;">&#xf0d7;</span></div>
 			</aside>
 		</div>
-		<nav class="head-nav hidden-xs row" role="main navigtion">
+		<div class="navbar-header visible-xs">
+		<button type="button" class="burger collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<i class="fa fa-bars"></i>
+		</button>
+		<button type="button" class="backpage" >
+			<span class="sr-only">Back</span>
+			<i class="fa fa-chevron-left"></i>
+		</button>
+		<button type="button" class="totop" >
+			<span class="sr-only">Back To Top</span>
+			<i class="fa fa-chevron-up"></i>
+		</button>
+		<button type="button" class="enlarge">
+			<span class="sr-only">Back To Top</span>
+			<i class="glyphicon glyphicon-text-size" ></i>
+		</button>
+	    </div>
+		<div class="head-nav collapse navbar-collapse" role="main navigtion" id="bs-example-navbar-collapse-1">
+			<button type="button" class="close-menu collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Back To Top</span>
+				<i class="fa fa-times  visible-xs" ></i>
+			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'nav-menu container' ) ); ?>
-		</nav>
+		</div>
 	</header>
 
 

@@ -1,0 +1,94 @@
+/* Extra small devices (phones, less than 768px) */
+@media only screen and (max-width : 768px) {
+	.home-text {width: 60%; margin-left: -30%;}
+	.home-text p { font-size: 140%; }
+	#home-carousel .carousel-inner {
+	  height: 280px;
+	}
+	.logo {  width: 100%;  height: 60px;  background-size: contain;  background-repeat: no-repeat;  background-position: center top;}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	header {padding-top: 40px; margin-bottom: 25px; .head-nav{position: relative; ul {display: flex; li {display: inline;}}}}
+	.home-text {width: 45%; margin-left: -22.5%;}
+	.squares-wrapper {display: flex; }
+	.set-wrapper {
+		height: 206px;
+		&.set1 {
+			max-width: 220px;
+		}
+		&.set2 {
+			max-width: 220px;
+			.square {width: 50%;}
+		}
+		&.set3 {
+			max-width: 220px;
+		}
+	}
+	.home-quotes .quote {font-size: 140%; line-height: 160%;}
+	.story-thumb {
+		display: table-cell;
+	}
+	.time-fixed-top{top: 36px;}
+	.timeline {border-bottom: 0; p {font-size: 140%;  display: inline-block; text-align: left;&.the-line {width: 50%; margin-bottom: 0px; }}}
+	.credits {  padding: 8px 0px; p {margin: 12px 0 22px; display: inline;}}
+	.ppl-links {
+		ul li {
+			display: inline-block; margin: 0 auto 30px; img{width: 90px;} .details {float: right;}
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.home-text p {font-size: 210%;}
+	.set-wrapper {
+		height: 246px;
+		&.set1 {
+			max-width: 246px;
+		}
+		&.set2 {
+			max-width: 368px;
+			.square {
+				width: 33.333%;
+			}
+		}
+		&.set3 {
+			max-width: 246px;
+		}
+	}
+	.home-quotes {max-width: 890px;left: 40px;  position: relative;}
+	.story-content {
+		  width: 525px; float: right;
+	}
+	h1 {font-size: 32px;}
+	.ppl-links ul li img {
+	  width: 154px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.set-wrapper {
+		height: 296px;
+		&.set1 {
+			max-width: 296px;
+		}
+		&.set2 {
+			max-width: 445px;
+			.square {
+				width: 33.333%;
+				height: 50%;
+			}
+		}
+		&.set3 {
+			max-width: 296px;
+			margin-right: 0;
+		}
+	}
+	.story-content {
+		  width: 645px; float: right;
+	}
+
+}

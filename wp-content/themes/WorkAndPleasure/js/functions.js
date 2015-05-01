@@ -6,7 +6,18 @@ $(window).load(function () {
 		}
 	});
 	setHomeQuote($('body > section > div.home-wrapper.container > section.squares-wrapper > div.set-wrapper.set1 > div:nth-child(2)'));
-
+	$(".wp-caption").removeAttr('style');
+	$('.totop').click(function () {
+		 $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+	});
+	$('.backpage').click(function () {
+		window.history.back();
+	});
+	$('.enlarge').click(function () {
+		$("#the-post").toggleClass('larger');
+	});
 });
 function setHomeQuote (obj) {
 	$('.home-quotes .person, .panel').stop( true, true ).animate({opacity: 0}, 'fast', function () {

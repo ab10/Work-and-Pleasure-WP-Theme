@@ -1,6 +1,6 @@
 h1 {
 	padding-top: 8px;
-	font-size: 31px;
+	font-size: 24px;
 	color: black;
 	@include font-proxima('semi');
 	text-transform: uppercase;
@@ -22,7 +22,7 @@ h3 {
 	width: 100%;
 }
 .story-thumb {
-	display: table-cell;
+	display: block;
 	padding-bottom: 3rem;
 	text-align: center;
 	&:hover {

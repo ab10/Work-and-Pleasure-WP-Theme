@@ -24,18 +24,14 @@ get_header(); ?>
 				<h3 class="row"><?php echo get_field('category_desc', $terms)?></h3>
 			</header>
 		</div>
-
 <!--
 		<button class="pull-right col-sm-2 transition-fast popular-btn">most popular</button>
 		<button class="pull-right col-sm-2 transition-fast liked-btn">stories i liked</button>
 -->	</div>
 </div>
-<div class="container timeline"><section class="col-sm-7 ">
-			<p class="">OLD stories</p>
-			<p class="the-line"><i class="fa fa-circle the-scrubber"></i></p>
-			<p class="">new stories</p>
-		</section></div>
-	<div class="thumb-grid">
+<?php get_template_part( 'parts/part', 'timeline' );?>
+
+<div class="thumb-grid">
 		<ul>
 <?php
 query_posts('cat='.$cat_id);

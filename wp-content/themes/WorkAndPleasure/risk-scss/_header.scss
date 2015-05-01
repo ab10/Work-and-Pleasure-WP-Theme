@@ -1,19 +1,18 @@
 header {
 	text-align: center;
 	margin: 0 auto;
-	margin-bottom: 25px;
 	position: relative;
 	font-size: 100%;
 	top: 0;
 	width: 100%;
-	padding-top: 40px;
+	padding-top: 20px;
 	.access {
 	margin-top: 18px;
 	padding-right: 0;
 		div.langswitch {
 			text-transform: uppercase;
 			color: #898989;
-			font-size: 75%;
+			font-size: 90%;
 			position: relative;
 			z-index: 1005;
 			span {
@@ -37,7 +36,6 @@ header {
 					a {
 						display: block;
 						text-align: center;
-						font-size: 100%;
 						padding: 6px 2px 5px;
 						background-color: white;
 						&:hover {
@@ -52,39 +50,38 @@ header {
 	.top {
 		position: relative;
 		padding: 0 15px 20px;
-		.logo {
-			float: none;
-			text-indent: -9999px;
-			width: 348px;
-			height: 69px;
-			background-image: url(images/logo.jpg);
-			display: inline-block;
-			margin: 0 auto;
-		}
 	}
-	nav {
+	.head-nav {
 		border-top: 1px solid black;
 		border-bottom: 1px solid black;
-		padding: 16px;
+		padding: 0 16px;
 		background-color: white;
-		position: relative;
-		li {
-			margin: 0 48px;
-			a {
-				color: #808080;
-				font-size: 1rem;
-				text-transform: uppercase;
-				@include font-proxima('semi');
-				position: relative;
-
-			}
-			&:hover, &.current-menu-item {
+		position: fixed;
+		bottom: 0px;
+		z-index: 6000;
+		width: 100%;
+		ul {
+			display: block;
+			li {
+				padding: 16px 0;
+				margin: 0 auto;
+				display: block;
 				a {
-					color: $dark-text;
+					color: #808080;
+					font-size: 100%;
+					text-transform: uppercase;
+					@include font-proxima('semi');
+					position: relative;
+
 				}
-			}
-			.sub-menu {
-				display: none;
+				&:hover, &.current-menu-item {
+					a {
+						color: $dark-text;
+					}
+				}
+				.sub-menu {
+					display: none;
+				}
 			}
 		}
 	}
@@ -134,34 +131,37 @@ footer {
 		@include font-minion('italic');
 		text-align: center;
 		width: 100%;
-		font-size: 35px;
+		font-size: 250%;
 		a {
-			@include font-minion();color: white;font-size: 35px; text-decoration: underline;
+			@include font-minion();color: white;font-size: 100%; text-decoration: underline;
 		}
 	}
 }
 
+.squares-wrapper {
+  display: block;
+}
 .set-wrapper {
-	height: 252px;
+	height: 296px;
 	display: inline-block;
 	border: 1px solid black;
 	text-align: center;
-	margin-right: 52px;
+	margin-right: auto;
 	overflow: hidden;
 	&.set1 {
-		max-width: 294px;
+		max-width: 100%;
 	}
 	&.set2 {
-		max-width: 440px;
+		max-width: 100%;
 	}
 	&.set3 {
-		max-width: 294px;
+		max-width: 100%;
 		margin-right: 0;
 	}
 	.square {
 		padding: 0px;
-		width: 146px;
-		height: 126px;
+		width: 50%;
+		height: 50%;
 		overflow: hidden;
 		margin: 0;
 		display: inline-block;
@@ -182,8 +182,8 @@ footer {
 	text-align: center;
 	padding: 40px;
 	height: 255px;
-	 width: 890px;
-	 margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 	img {
 		display: inline-block;
 	//	display: none;
@@ -229,28 +229,32 @@ footer {
 	}
 	.quote {@include font-minion('italic'); font-size: 170%; }
 }
-.timeline {background: white; z-index: 100;}
-.time-fixed-top{position: fixed; top: 36px;}
+.time-fixed-top{position: fixed; top: 0px;}
 .timeline {
-	margin: 10px 0;
-	background-color: white;
+	width: 100%;
+	left: 0;
+	margin: 0;
+	background-color: rgba(255,255,255,0.85);
 	padding: 10px 0;
+	z-index: 100; max-width: 100%; border-bottom: 1px solid rgba(0,0,0,.4);
 	p {
 		color: black;
-		font-size: 140%;
-		margin: 0;
+		font-size: 120%;
+		line-height: 0.8;
+		display: block;
 		text-transform: lowercase;
 		padding: 0;
 		//width: 20%;
-		display: inline-block;
-		margin-right: 10px;
+		margin: 0 10px 16px 0;
 		@include font-minion('italic');
 		&.the-line {
 			border-top: 1px solid black;
 			position: relative;
 			top: -4px;
-			width: 50%;
+			width: 100%;
+			margin-bottom: 6px;
 		}
+		&:last-child{text-align: right; margin-bottom: 0;}
 	}
 }
 .popular-btn, .liked-btn {
@@ -355,4 +359,36 @@ footer {
 	opacity: 1;
 	padding: 10px 17px;
 	font-size: 27px;
+}
+
+.navbar-header {
+	background: black;
+	position: fixed;
+	bottom: 0;
+	left: 0;  z-index: 5000;
+}
+.navbar-toggle {float: right;}
+.logo {
+	float: none;
+	text-indent: -9999px;
+	width: 348px;
+	height: 69px;
+	background-image: url(images/logo.jpg);
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.navbar-header {
+	background: transparent;
+	button {
+		width: 50px;
+		height: 35px;
+		font-size: 140%;
+		line-height: 180%;
+		&:first-child {background-color: black; color: white;}
+	}
+}
+.close-menu {
+	font-size: 130%;
+	background-color: black; color: white;
 }

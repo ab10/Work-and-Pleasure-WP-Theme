@@ -8,7 +8,7 @@
  * @since Risk
  */
  get_header(); ?>
-<section class="main-content container">
+<section class="main-content container no-padding">
 		<?php
 			if ( have_posts() ) :
 				$lang = pll_current_language('slug');
@@ -23,18 +23,19 @@
 							<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
 						</aside>
 					</header>
-					<div class="post-content">
+					<div class="post-content" id="the-post">
 						<?php if (get_field('display_side_bar')) {?>
-						<article class="col-sm-8 pull-left">
+						<article class="col-sm-8 pull-left col-xs-12">
 							<?php } else { ?>
-						<article class="col-sm-12 pull-left">
+						<article class="col-xs-12 pull-left">
 							<?php } ?>
 							<header class="post-title">
 								<h1><?php the_title(); ?></h1>
-								<p class="credits">words by <span>Carl Honoré</span>   photographs by <span>Mark Sanders</span><span class="date pull-right"><?php the_date('j.n.Y'); ?></span></p>
+								<div class="credits"><p>words by <span>Carl Honoré</span></p>   <p>photographs by <span>Mark Sanders</span><span class="date pull-right"><?php the_date('j.n.Y'); ?></span></p></div>
+								<div class="clearfix"></div>
 							</header>
 							<aside class="story-icon pull-left"> <img src="<?php echo get_site_url()?>/wp-content/uploads/2015/03/cat1.jpg"> </aside>
-							<div class="story-content pull-right">
+							<div class="story-content">
 								<?php the_content();?>
 								<button class="to-top one-half no-padding text-left pull-left"><i class="fa fa-caret-up"></i> Return To Top</button>
 								<aside class="one-half no-padding pull-right like-meter text-right">
@@ -45,7 +46,7 @@
 							<div class="clearfix"></div>
 						</article><!-- Close Story Content-->
 						<?php if (get_field('display_side_bar')) {?>
-						<aside class="side-bar col-sm-3 pull-right">
+						<aside class="side-bar col-sm-3 col-xs-12 pull-right">
 							<?php
 								if( have_rows('side_bar_item') ):
 								// loop through the rows of data
@@ -85,7 +86,7 @@
 						</aside><!-- Close Side Bar-->
 						<?php } ?>
 						<div class="clearfix"></div>
-						<section class="ppl-links col-xs-12">
+						<section class="ppl-links col-xs-12 ">
 							<h3>people mentioned in this story</h3>
 							<?php
 								$ids = get_field('real_ppl_in_story', false, false);
@@ -103,9 +104,10 @@
 										$query->the_post();?>
 										<li class="">
 											<?php echo (get_the_post_thumbnail(get_the_ID(), array(154,154), array( 'class' => 'pull-left img-responsive' )));?>
-											<div class="pull-right"><h4><?php echo get_the_title();?></h4>
+											<div class="details"><h4><?php echo get_the_title();?></h4>
 											<h5><?php echo get_the_excerpt($post);?></h5>
 											<a href="#">View More</a></div>
+											<div class="clearfix"></div>
 										</li>
 										<?php wp_reset_postdata();
 								    endwhile;
@@ -115,7 +117,7 @@
 						</section>
 						<div class="clearfix"></div>
 						<hr style=" color: #1d1d1b; border-color:#1d1d1b; width: 100%; margin: 40px auto;">
-						<aside class="related">
+						<aside class="related row">
 							<ul>
 								<?php
 									$newargs = array(
@@ -157,7 +159,7 @@
 							</ul>
 						</aside>
 						<div class="clearfix"></div>
-						<?php comments_template('');?>
+						<?php // comments_template('');?>
 					</div>
 					<h1></h1>
 					<?php

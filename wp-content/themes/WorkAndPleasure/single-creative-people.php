@@ -26,11 +26,7 @@ get_header(); ?>
 		<button class="pull-right col-sm-2 transition-fast liked-btn">stories i liked</button>
 -->	</div>
 </div>
-<div class="container timeline"><section class="col-sm-7 ">
-			<p class="">OLD stories</p>
-			<p class="the-line"><i class="fa fa-circle the-scrubber"></i></p>
-			<p class="">new stories</p>
-		</section></div>
+<?php get_template_part( 'parts/part', 'timeline' );?>
 	<div class="thumb-grid">
 		<ul>
 
