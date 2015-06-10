@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>>
 	<header class="main-header">
 		<div class="top container">
-			<aside class="col-sm-2 hidden-xs"><a href="http://riskmadeinwarsaw.pl" class="shop-btn pull-left">SHOP</a></aside>
+			<aside class="col-sm-2 hidden-xs"><a href="http://riskmadeinwarsaw.com" class="shop-btn pull-left">SHOP</a></aside>
 			<h1 class="col-sm-8 col-xs-12 no-margin no-padding pull-left "><a class="logo" href="<?php echo get_site_url(); ?>">Risk - Work & Pleasure	</a></h1>
 			<aside class="access col-sm-2 pull-right hidden-xs">
 				<a href="#search" class="fa pull-right col-sm-1 col-sm-offset-0 search-btn" style="margin-right: 0;   margin-top: 4px;">&#xf002;</a>
