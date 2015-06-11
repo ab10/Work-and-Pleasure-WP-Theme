@@ -4,10 +4,10 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: multilingual, bilingual, translate, translation, language, multilanguage, international, localization
 Requires at least: 3.8
 Tested up to: 4.2
-Stable tag: 1.7.3
+Stable tag: 1.7.6
 License: GPLv2 or later
 
-Polylang adds multilingual content management support to WordPress.
+Making WordPress multilingual
 
 == Description ==
 
@@ -25,7 +25,46 @@ Polylang allows you to create a bilingual or multilingual WordPress site. You wr
 
 = Translators =
 
-The plugin admin interface is currently available in 37 languages: English, French, German by [Christian Ries](http://www.singbyfoot.lu), Russian by [yoyurec](http://yoyurec.in.ua) and unostar, Greek by [theodotos](http://www.ubuntucy.org), Dutch by [AlbertGn](http://wordpress.org/support/profile/albertgn), Hebrew by [ArielK](http://www.arielk.net), Polish by [Peter Paciorkiewicz](http://www.paciorkiewicz.pl), [Bartosz](http://www.dfactory.eu/) and Sebastian Janus, Latvian by [@AndyDeGroo](http://twitter.com/AndyDeGroo), Italian by [Luca Barbetti](http://wordpress.org/support/profile/lucabarbetti), Danish by [Compute](http://wordpress.org/support/profile/compute), Spanish by Curro, Portuguese by [Vitor Carvalho](http://vcarvalho.com/), Lithuanian by [Naglis Jonaitis](http://najo.lt/), Turkish by [darchws](http://darch.ws/) and [Abdullah Pazarbasi](http://www.abdullahpazarbasi.com/), Finnish by [Jani Alha](http://www.wysiwyg.fi), Bulgarian by [pavelsof](http://wordpress.org/support/profile/pavelsof), Belarusian by [Alexander Markevitch](http://fourfeathers.by/), Afrikaans by [Kobus Joubert](http://translate3d.com/), Hungarian by Csaba Erdei, Norwegian by [Tom Boersma](http://www.oransje.com/), Slovak by [Branco (WebHostingGeeks.com)](http://webhostinggeeks.com/user-reviews/), Swedish by [matsii](http://wordpress.org/support/profile/matsii) and [Jon Täng](http://jontang.se), Catalan by [Núria Martínez Berenguer](http://www.linkedin.com/profile/view?id=127867004&trk=nav_responsive_tab_profile&locale=en_US), Ukrainian by [cmd soft](http://www.cmd-soft.com/), [http://getvoip.com/](http://getvoip.com/) and [Andrii Ryzhkov](https://github.com/andriiryzhkov), Estonian by [Ahto Naris](http://profiles.wordpress.org/ahtonaris/), Venetian by Michele Brunelli, simplified Chinese by [Changmeng Hu](http://www.wpdaxue.com), Indonesian by [ajoull](http://www.ajoull.com/), Arabic by [Anas Sulaiman](http://ahs.pw/), Traditional Chinese by [香腸](http://sofree.cc/), Czech by [Přemysl Karbula](http://www.premyslkarbula.cz), Serbian by Sinisa, Myanmar by Sithu Thwin, Croatian by Bajro, Brazilian Portuguese by [Henrique Vianna](http://henriquevianna.com/), Georgian by [Tours in Georgia](http://www.georgia-tours.eu/)
+The plugin admin interface is currently available in 38 languages:
+
+* English
+* French
+* German by [Christian Ries](http://www.singbyfoot.lu)
+* Russian by [yoyurec](http://yoyurec.in.ua) and unostar
+* Greek by [theodotos](http://www.ubuntucy.org)
+* Dutch by [AlbertGn](http://wordpress.org/support/profile/albertgn)
+* Hebrew by [ArielK](http://www.arielk.net)
+* Polish by [Peter Paciorkiewicz](http://www.paciorkiewicz.pl), [Bartosz](http://www.dfactory.eu/) and Sebastian Janus
+* Latvian by [@AndyDeGroo](http://twitter.com/AndyDeGroo)
+* Italian by [Luca Barbetti](http://wordpress.org/support/profile/lucabarbetti)
+* Danish by [Compute](http://wordpress.org/support/profile/compute)
+* Spanish by Curro
+* Portuguese by [Vitor Carvalho](http://vcarvalho.com/)
+* Lithuanian by [Naglis Jonaitis](http://najo.lt/)
+* Turkish by [darchws](http://darch.ws/) and [Abdullah Pazarbasi](http://www.abdullahpazarbasi.com/)
+* Finnish by [Jani Alha](http://www.wysiwyg.fi)
+* Bulgarian by [pavelsof](http://wordpress.org/support/profile/pavelsof)
+* Belarusian by [Alexander Markevitch](http://fourfeathers.by/)
+* Afrikaans by [Kobus Joubert](http://translate3d.com/)
+* Hungarian by Csaba Erdei
+* Norwegian by [Tom Boersma](http://www.oransje.com/)
+* Slovak by [Branco (WebHostingGeeks.com)](http://webhostinggeeks.com/user-reviews/) and [Maros Kucera](https://maroskucera.com)
+* Swedish by [matsii](http://wordpress.org/support/profile/matsii) and [Jon Täng](http://jontang.se)
+* Catalan by [Núria Martínez Berenguer](http://www.linkedin.com/profile/view?id=127867004&trk=nav_responsive_tab_profile&locale=en_US)
+* Ukrainian by [cmd soft](http://www.cmd-soft.com/), [http://getvoip.com/](http://getvoip.com/) and [Andrii Ryzhkov](https://github.com/andriiryzhkov)
+* Estonian by [Ahto Naris](http://profiles.wordpress.org/ahtonaris/)
+* Venetian by Michele Brunelli
+* simplified Chinese by [Changmeng Hu](http://www.wpdaxue.com)
+* Indonesian by [ajoull](http://www.ajoull.com/)
+* Arabic by [Anas Sulaiman](http://ahs.pw/)
+* Traditional Chinese by [香腸](http://sofree.cc/)
+* Czech by [Přemysl Karbula](http://www.premyslkarbula.cz)
+* Serbian by Sinisa
+* Myanmar by Sithu Thwin
+* Croatian by Bajro
+* Brazilian Portuguese by [Henrique Vianna](http://henriquevianna.com/)
+* Georgian by [Tours in Georgia](http://www.georgia-tours.eu/)
+* Galician by [Toño Calo](http://fedellar.wordpress.com/)
 
 = Credits =
 
@@ -67,10 +106,43 @@ See http://polylang.wordpress.com/documentation/contribute/
 
 == Changelog ==
 
+= 1.7.6 (2015-06-10) =
+
+* Add Galician translation contributed by [Toño Calo](http://fedellar.wordpress.com/)
+* fix: incorrect post type archive link for untranslated post types
+* fix: notices in wp-import.php
+* fix: avoid flushing rewrite rules at network activation and de-activation
+* fix: the note below the category list table displays the default category according to the admin language filter
+* fix: wrong future posts permalinks
+* fix: deleting a media translation deletes the file too
+* fix: when using persistent object cache, get_terms is not always filtered by the correct language on admin side
+* fix: it is possible to create two categories having the same translation
+* fix: fatal error when using the dropdown language switcher in WP < 4.1
+
+= 1.7.5 (2015-05-11) =
+
+* Add 'pll_languages_list' filter
+* fix: warning when a plugin calls 'icl_object_id' with an untranslated post type (seen in ACF 4.4.1)
+* fix: the language is not correctly set from the url when using PATHINFO permalinks (introduced in 1.6!)
+* fix: notice when a search is filtered by a taxonomy term in a different language
+
+= 1.7.4 (2015-05-03) =
+
+* fix: translated taxonomies and post types from wpml-config.xml are not filtered on frontend (introduced in 1.7.2)
+* fix: WPML strings translations not always loaded (introduced in 1.7)
+* fix: $.ajaxPrefilter() may not work as expected [props ScreenfeedFr](https://wordpress.org/support/topic/ajaxprefilter-may-not-work-as-expected)
+* fix: can't hide the language code for the default language when using subdomains
+* fix: incorrect static front page url when hiding the default language information
+* fix: an untranslated posts page may display posts in all languages
+* fix: javascript error when changing the language of a hierarchical post type from the languages metabox in WP 4.2
+* fix: subdomains urls are malformed when the main site uses www.
+* fix: suggest tags are not filtered in quick edit
+* fix: parent page dropdown list not filtered in quick edit
+
 = 1.7.3 (2015-04-11) =
 
 * the transient 'pll_languages_list' now stores an array of arrays instead of an array of PLL_Language objects
-* fix: fatal error for users hosted at GoDaddy (due to PLL_Language objects stored in a transient) 
+* fix: fatal error for users hosted at GoDaddy (due to PLL_Language objects stored in a transient)
 * fix: additional query vars are removed from home page
 * fix: categories are not filtered by the admin language switcher in posts list table (introduced in 1.7)
 * fix: when using multiple domains, the domain url is lost when modifying the language slug
@@ -102,7 +174,7 @@ See http://polylang.wordpress.com/documentation/contribute/
 * Improve performance by using base64 encoded flags + various slight optimizations
 * Improve protection against chained redirects
 * The find posts list is now filtered per media language when clicking on attach link in Media library
-* Copy alternative text when creating a media translation 
+* Copy alternative text when creating a media translation
 * The category checklist in quick edit is now filtered per post language instead of admin language filter
 * Quick and bulk language edit don't break translations anymore if the new language is free
 * Make it impossible to change the language of the default categories
