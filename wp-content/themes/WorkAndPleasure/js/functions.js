@@ -5,10 +5,43 @@ $(window).load(function () {
 			setHomeQuote ($square);
 		}
 	});
+	$('.head-nav ul li a').click(function (e) {
+		e.preventDefault();
+		//Get clicked URL
+		$('#main').addClass("get-out");
+		href = ($(this).find("a").attr("href"));
+		$("body").animate({ scrollTop: "0px" }, {"duration": 700, "easing":"easeInOutCubic", complete: function () {
+			$('.loader').fadeIn();
+			getNewMain(href);
+		}});
+
+	});
+	$(document).on('click', '.story-thumb',function (e) {
+		e.preventDefault();
+		if ($(this).hasClass("hovered")) {
+			//Get clicked URL
+			href = ($(this).find("a").attr("href"));
+			$('#main').addClass("get-out");
+			$("body").animate({ scrollTop: "0px" }, {"duration": 700, "easing":"easeInOutCubic", complete: function () {
+				$('.loader').fadeIn();
+				getNewMain(href);
+			}});
+		} else {
+			$(this).addClass("hovered");
+		}
+	});
+	$(document).on('mouseenter', '.story-thumb',function (e) {
+		$(this).addClass("hovered");
+	});
+	$(document).on('mouseleave', '.story-thumb',function (e) {
+		$(this).removeClass("hovered");
+	});
+
+
 	setHomeQuote($('body > section > div.home-wrapper.container > section.squares-wrapper > div.set-wrapper.set1 > div:nth-child(2)'));
 	$(".wp-caption").removeAttr('style');
 	$('.totop').click(function () {
-		 $('html, body').animate({
+		 $('html').animate({
                 scrollTop: 0
             }, 500);
 	});
@@ -18,7 +51,7 @@ $(window).load(function () {
 	$('.enlarge').click(function () {
 		$("#the-post").toggleClass('larger');
 	});
-});
+
 function setHomeQuote (obj) {
 	$('.home-quotes .person, .panel').stop( true, true ).animate({opacity: 0}, 'fast', function () {
 		$('.home-quotes p.quote').text(obj.attr('data-quote'));
@@ -57,7 +90,7 @@ $( ".the-scrubber" ).draggable({
   }, axis: "x",
   containment: ".the-line"
 });
-
+});
 $(function () {
     $('a[href="#search"]').on('click', function(event) {
         event.preventDefault();
@@ -71,3 +104,16 @@ $(function () {
         }
     });
 });
+function getNewMain() {
+//	alert('')
+	stateObj = {page: $(this).text()}
+	$('#main').load(href + " #main > *", function () {
+
+		history.pushState(stateObj, $(this).text(), href);
+		//updateMetaTags();
+		//getJson();
+		$('#main').removeClass("get-out");
+		$('.loader').fadeOut("fast");
+	});
+}
+

@@ -94,13 +94,7 @@ function creative_ppl_posts() {
 }
 add_action( 'init', 'creative_ppl_posts' );
 
+include_once(get_template_directory().'/inc/load_scripts.php');
 
-function add_scripts() {
-    echo '<script src="'.get_template_directory_uri().'/js/jquery-1.11.2.min.js"></script>';
-    echo '<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>';
-    echo '<script src="'.get_template_directory_uri().'/js/bootstrap.min.js" type="text/javascript"></script>';
-	echo '<script src="'.get_template_directory_uri().'/js/functions.js" type="text/javascript"></script>';
-}
-add_action('wp_footer', 'add_scripts');
 
 ?>

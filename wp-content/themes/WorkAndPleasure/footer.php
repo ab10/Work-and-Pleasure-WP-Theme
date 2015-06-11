@@ -8,7 +8,7 @@
  * @since PEER 1.0
  */
 ?>
-
+</section>
 <?php get_search_form(); ?>
 <footer>
 	<div class="container ">
@@ -20,7 +20,7 @@
 		</p>
 	</div>
 </footer>
-
+<aside class="loader">Loading...</aside>
 <script type="text/javascript">
 
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

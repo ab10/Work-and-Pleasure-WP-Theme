@@ -11,10 +11,9 @@
 
 
 get_header(); ?>
-<section class="main-content container">
-	<div class="wpb_row vc_row-fluid">
-	<div class="vc_span12 wpb_column column_container">
-		<div class="wpb_wrapper">
+
+	<div class="row">
+		<div class="container">
 			<?php $terms = get_term( $_GET["cat"], 'category');
 				$cat_id = ($_GET["cat"]);?>
 
@@ -23,7 +22,7 @@ get_header(); ?>
 				<h1 class="row"><?php single_cat_title(); ?></h1>
 				<h3 class="row"><?php echo get_field('category_desc', $terms)?></h3>
 			</header>
-		</div>
+
 <!--
 		<button class="pull-right col-sm-2 transition-fast popular-btn">most popular</button>
 		<button class="pull-right col-sm-2 transition-fast liked-btn">stories i liked</button>
@@ -38,15 +37,15 @@ query_posts('cat='.$cat_id);
 $t = 0;
 if(have_posts()) :
   while (have_posts()) : the_post();?>
-  <li class="story-thumb  col-sm-4">
-			<a class="thumb transition-fast" href="<?php the_permalink()?>" style="background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
-				echo $thumb['0'];?>)"></a>
-			<a href="<?php the_permalink()?>" class="qlink"><p class="quote transition-fast">
+  <li class="story-thumb col-sm-4">
+			<a class="thumb" href="<?php the_permalink()?>" style="background-image: url()"><img class="transition-fast" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
+				echo $thumb['0'];?>"></a>
+			<a href="<?php the_permalink()?>" class="qlink "><p class="quote transition">
 				<?php if( have_rows('quote') ):
 					while ( have_rows('quote') ) : the_row();
 					        the_sub_field('quote_text');
 							$post_ob = get_sub_field('person');
-							echo "<span>".($post_ob->post_title)."</span>";
+							echo "<span class='transition-slow'>".($post_ob->post_title)."</span>";
 					    endwhile;
 					endif;
 				?></p></a>
@@ -70,7 +69,7 @@ if(have_posts()) :
 	</div>
 </div><!-- Close .home-wrapper -->
 <div class="clearfix"></div>
-</section>
+
 
 <?php
 get_footer();

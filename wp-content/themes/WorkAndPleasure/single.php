@@ -8,7 +8,7 @@
  * @since Risk
  */
  get_header(); ?>
-<section class="main-content container no-padding">
+
 		<?php
 			if ( have_posts() ) :
 				$lang = pll_current_language('slug');
@@ -159,7 +159,7 @@
 							</ul>
 						</aside>
 						<div class="clearfix"></div>
-						<?php // comments_template('');?>
+						<?php comments_template('/risky-comments.php');?>
 					</div>
 					<h1></h1>
 					<?php

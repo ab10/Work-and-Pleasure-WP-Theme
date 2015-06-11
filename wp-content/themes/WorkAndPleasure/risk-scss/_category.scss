@@ -25,18 +25,33 @@ h3 {
 	display: block;
 	padding-bottom: 3rem;
 	text-align: center;
-	&:hover {
-		a.thumb {opacity: 0.5; -ms-transform: scale(1.05); /* IE 9 */
-    -webkit-transform: scale(1.05); /* Safari */
-    transform: scale(1.05)}
-		p.quote {opacity: 1;}
+	&.hovered {
+		a.thumb img {
+			opacity: 0.4; min-width: 130%; -webkit-filter: blur(10px); -moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px); filter: blur(10px);
+   		}
+		p.quote {opacity: 1;-webkit-transition-delay: 0.05s; /* Safari */
+    transition-delay: 0.05s; top:50%;
+    -ms-transform: scale(1,1) translateY(-50%); /* IE 9 */
+	    -webkit-transform: scale(1,1) translateY(-50%); /* Safari */
+	    transform: scale(1,1) translateY(-50%); /* Standard syntax */
+    span{top:0; opacity: 1; -webkit-transition-delay: 0.7s; /* Safari */
+    transition-delay: 0.7s;}}
 	}
 	a.thumb {margin-bottom: 8px;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position: center center;
 		width: 100%;
 		display: inherit;
 		height: 220px;
+		overflow: hidden;
+		img {min-width: 100%; position: relative; min-height: 100%; height: auto;
+		  top: 50%;
+		  left: 50%;
+		   -webkit-transform: translate(-50%,-50%);
+		  -ms-transform: translate(-50%,-50%);
+		  transform: translate(-50%,-50%);}
+
 	}
 	&:nth-child(3n+0) {
 		margin: 0 0 0 auto;
@@ -46,7 +61,7 @@ h3 {
 	}
 	p.quote {
 		position: absolute;
-		top: 0;
+		top: -20px;
 		left: 0;
 		padding: 0 40px;
 		top: 50%;
@@ -58,10 +73,16 @@ h3 {
 		width: 100%;
 		opacity: 0;
 		line-height: 140%;
+		-webkit-transition-delay: 0s; /* Safari */
+		transition-delay: 0s;
+		-ms-transform: scale(0.92,0.92) translateY(-50%); /* IE 9 */
+	    -webkit-transform: scale(0.92,0.92) translateY(-50%); /* Safari */
+	    transform: scale(0.92,0.92) translateY(-50%); /* Standard syntax */
 		span {
 			@include font-proxima('semi');
 			font-size: 65%;
 			display: block;
+			position: relative; top: 0px; opacity: 0;
 		}
 	}
 	h2 {

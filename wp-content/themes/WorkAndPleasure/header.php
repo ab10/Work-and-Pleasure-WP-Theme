@@ -14,15 +14,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/risk-scss/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css?<?php echo time()?>" type="text/css" media="all">
-			<?php wp_head(); ?>
-			<link rel='stylesheet' id='js_composer_front-css'  href='<?php echo get_site_url();?>/wp-content/plugins/js_composer/assets/css/js_composer_front.css?ver=4.2.3' type='text/css' media='all' />
-
+	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<header class="main-header">
+	<header class="site-header">
 		<div class="top container">
 			<aside class="col-sm-2 hidden-xs"><a href="http://riskmadeinwarsaw.com" class="shop-btn pull-left">SHOP</a></aside>
 			<h1 class="col-sm-8 col-xs-12 no-margin no-padding pull-left "><a class="logo" href="<?php echo get_site_url(); ?>">Risk - Work & Pleasure	</a></h1>
@@ -57,7 +52,7 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'nav-menu container' ) ); ?>
 		</div>
 	</header>
-
+	<section class="main-content container transition no-padding " id="main">
 
 <!--
 

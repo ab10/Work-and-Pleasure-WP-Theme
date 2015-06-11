@@ -145,11 +145,11 @@ p, ul, ol, dl, blockquote, hr, pre, hgroup, table { margin: 0; }
 /* Links */
 a {
 	text-decoration: none;
-	-webkit-transition: all 0.25s linear;
-	-moz-transition: all 0.25s linear;
-	-ms-transition: all 0.25s linear;
-	-o-transition: all 0.25s linear;
-	transition: all 0.25s linear;
+	-webkit-transition: all 0.25s ease-in;
+	-moz-transition: all 0.25s ease-in;
+	-ms-transition: all 0.25s ease-in;
+	-o-transition: all 0.25s ease-in;
+	transition: all 0.25s ease-in;
 	color: #808080;
 	-webkit-animation-fill-mode: forwards;
 }
@@ -175,11 +175,11 @@ a.underline,
 	background-color: transparent;
 	border-bottom: 1px solid;
 
-	-webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	-ms-transition: all 0.3s linear;
-	-o-transition: all 0.3s linear;
-	transition: all 0.3s linear;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
 }
 a.underline:hover,
 .underline a:hover {
@@ -195,11 +195,11 @@ a.underline-hover,
 	background-color: transparent;
 	border-bottom: 1px solid transparent;
 
-	-webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	-ms-transition: all 0.3s linear;
-	-o-transition: all 0.3s linear;
-	transition: all 0.3s linear;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
 }
 
 a.underline-hover:hover,
@@ -250,25 +250,25 @@ Global Classes
 
 /* Animations */
 .transition {
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-ms-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .transition-fast {
-	-webkit-transition: all 0.1s linear;
-	-moz-transition: all 0.1s linear;
-	-ms-transition: all 0.1s linear;
-	-o-transition: all 0.1s linear;
-	transition: all 0.1s linear;
+		-webkit-transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	-ms-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
 }
 .transition-slow {
-	-webkit-transition: all 0.6s linear;
-	-moz-transition: all 0.6s linear;
-	-ms-transition: all 0.6s linear;
-	-o-transition: all 0.6s linear;
-	transition: all 0.6s linear;
+	-webkit-transition: all 0.6s ease-in;
+	-moz-transition: all 0.6s ease-in;
+	-ms-transition: all 0.6s ease-in;
+	-o-transition: all 0.6s ease-in;
+	transition: all 0.6s ease-in;
 }
 
 /* Corners */
