@@ -105,15 +105,12 @@ $(function () {
     });
 });
 function getNewMain() {
-//	alert('')
+	$('#main').load(href + " #main > *", showContent);
+}
+function showContent() {
 	stateObj = {page: $(this).text()}
-	$('#main').load(href + " #main > *", function () {
-
-		history.pushState(stateObj, $(this).text(), href);
-		//updateMetaTags();
-		//getJson();
-		$('#main').removeClass("get-out");
+	history.pushState(stateObj, $(this).text(), href);
+	$('#main').removeClass("get-out");
 		$('.loader').fadeOut("fast");
-	});
 }
 
