@@ -37,7 +37,7 @@
 							<aside class="story-icon pull-left"> <img src="<?php echo get_site_url()?>/wp-content/uploads/2015/03/cat1.jpg"> </aside>
 							<div class="story-content">
 								<?php the_content();?>
-								<button class="to-top one-half no-padding text-left pull-left"><i class="fa fa-caret-up"></i> Return To Top</button>
+								<a class="to-top one-half no-padding text-left pull-left" style="cursor: pointer;"><i class="fa fa-caret-up"></i> Return To Top</a>
 								<aside class="one-half no-padding pull-right like-meter text-right">
 									<i class="fa fa-facebook-official"></i> 136 &nbsp;&nbsp;
 									<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>

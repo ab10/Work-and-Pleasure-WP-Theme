@@ -40,10 +40,10 @@ $(window).load(function () {
 
 	setHomeQuote($('body > section > div.home-wrapper.container > section.squares-wrapper > div.set-wrapper.set1 > div:nth-child(2)'));
 	$(".wp-caption").removeAttr('style');
-	$('.totop').click(function () {
-		 $('html').animate({
+	$('.to-top').click(function () {
+		 $('body').animate({
                 scrollTop: 0
-            }, 500);
+            },  {"duration": 700, "easing":"easeInOutCubic"});
 	});
 	$('.backpage').click(function () {
 		window.history.back();
