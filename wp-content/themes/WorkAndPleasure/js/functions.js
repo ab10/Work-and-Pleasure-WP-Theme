@@ -110,7 +110,8 @@ function getNewMain() {
 function showContent() {
 	stateObj = {page: $(this).text()}
 	history.pushState(stateObj, $(this).text(), href);
-	$('#main').removeClass("get-out");
-		$('.loader').fadeOut("fast");
+	setTimeout(function(){$('#main').removeClass("get-out");
+	$('.loader').fadeOut("fast");; }, 500);
+
 }
 
