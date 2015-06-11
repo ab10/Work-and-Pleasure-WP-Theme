@@ -31,7 +31,7 @@
 							<?php } ?>
 							<header class="post-title">
 								<h1><?php the_title(); ?></h1>
-								<div class="credits"><p>words by <span>Carl Honoré</span></p>   <p>photographs by <span>Mark Sanders</span><span class="date pull-right"><?php the_date('j.n.Y'); ?></span></p></div>
+								<div class="credits"><p>words by <span><?php the_field('writer_credit')?></span></p>   <p>photographs by <span><?php the_field('photos_credit')?></span><span class="date pull-right"><?php the_date('j.n.Y'); ?></span></p></div>
 								<div class="clearfix"></div>
 							</header>
 							<aside class="story-icon pull-left"> <img src="<?php echo get_site_url()?>/wp-content/uploads/2015/03/cat1.jpg"> </aside>
