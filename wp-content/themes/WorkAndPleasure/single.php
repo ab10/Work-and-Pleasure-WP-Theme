@@ -86,10 +86,14 @@
 						</aside><!-- Close Side Bar-->
 						<?php } ?>
 						<div class="clearfix"></div>
+						<?php
+								$ids = get_field('real_ppl_in_story', false, false);
+								if ($ids)  {
+								?>
 						<section class="ppl-links col-xs-12 ">
 							<h3>people mentioned in this story</h3>
-							<?php
-								$ids = get_field('real_ppl_in_story', false, false);
+
+<?php
 								$query = new WP_Query(array(
 									'post_type'      	=> 'creative_ppl',
 									'post__in'		=> $ids,
@@ -111,10 +115,11 @@
 										</li>
 										<?php wp_reset_postdata();
 								    endwhile;
+
 								endif;
 								?>
 							</ul>
-						</section>
+						</section><?php } ?>
 						<div class="clearfix"></div>
 						<hr style=" color: #1d1d1b; border-color:#1d1d1b; width: 100%; margin: 40px auto;">
 						<aside class="related row">
