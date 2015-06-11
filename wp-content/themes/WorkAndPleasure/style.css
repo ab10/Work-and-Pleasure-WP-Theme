@@ -1426,6 +1426,10 @@ h3 {
   margin-top: 14px;
 }
 
+.story-content img {
+  max-width: 100%;
+}
+
 .wp-caption-text {
   font-family: 'MinionBoldItalic', 'Times New Roman';
   font-weight: normal;

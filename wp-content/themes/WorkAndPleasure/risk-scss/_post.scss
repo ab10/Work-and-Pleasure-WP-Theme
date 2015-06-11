@@ -33,6 +33,7 @@
 .story-content {
 	  width: 100%;
 	  .like-meter {margin-top: 14px;}
+	  img {max-width: 100%;}
 }
 .wp-caption-text {
 	@include font-minion('bolditalic');
