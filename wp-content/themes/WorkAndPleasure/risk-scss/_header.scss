@@ -56,21 +56,22 @@ header {
 		border-bottom: 1px solid black;
 		padding: 0 16px;
 		background-color: white;
-		position: fixed;
-		bottom: 0px;
+		top: 10px;
 		z-index: 6000;
 		width: 100%;
 		ul {
 			display: block;
 			li {
 				padding: 16px 0;
-				margin: 0 auto;
 				display: block;
+				margin: 0 58px;
+				&:first-child {margin-left: 0;}
+				&:last-child {margin-right: 0;}
 				a {
 					color: #808080;
 					font-size: 100%;
 					text-transform: uppercase;
-					@include font-proxima('semi');
+					@include font-proxima('regular');
 					position: relative;
 
 				}

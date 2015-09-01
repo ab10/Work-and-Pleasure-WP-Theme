@@ -15,8 +15,9 @@ get_header(); ?>
 	<div class="wpb_row vc_row-fluid">
 	<div class="vc_span12 wpb_column column_container">
 		<div class="wpb_wrapper">
-			<?php $terms = get_term( $_GET["cat"], 'category');
-				$cat_id = ($_GET["cat"]);?>
+			<?php $q_vars = ($wp_query->query_vars);
+				$terms = get_term( $q_vars["cat"], 'category');
+				$cat_id = ($q_vars["cat"]);?>
 
 			<header class="row cat-head">
 				<img src="<?php echo get_field('category_image', $terms)?>" alt="<?php single_cat_title(); ?>">

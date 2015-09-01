@@ -210,3 +210,27 @@ p {
     box-shadow: 0 -0.83em 0 -0.4em #959595, 0 -0.83em 0 -0.42em #959595, 0 -0.83em 0 -0.44em #959595, 0 -0.83em 0 -0.46em #959595, 0 -0.83em 0 -0.477em #959595;
   }
 }
+.comment-entry {
+	h3 {
+		@include font-proxima();
+		font-size: 130%;
+		color: black;
+		margin-bottom: 4px;
+		padding-top: 25px;
+		text-transform: capitalize;
+	}
+	p {clear: both; padding-bottom: 8px; @include font-minion;}
+}
+.commentmetadata {float: right; color :#666666; @include font-minion('italic');}
+.comment-author {float: left; @include font-minion('bold');
+		font-size: 110%;
+		color: black;}
+		.comment-body {margin-bottom: 20px;}
+		.reply a{color: black; font-size: 110%;}
+		.comment-notes {color :#666666; font-size: 85%; #email-notes { display: block;}}
+		#commentform {label {width: 112px;} input, #comment {border: 1px solid #666666; width: 100%; @include font-minion('italic'); padding-left: 8px;}}
+		.form-allowed-tags {display: none;}
+		.form-submit #submit {background-color: transparent; width: 40%; float: right; @include font-proxima();}
+		.comment-awaiting-moderation {float: right;}
+		footer p{color: #808080;}
+		.fb-like {margin-right: 15px;}

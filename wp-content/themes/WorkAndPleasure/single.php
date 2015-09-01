@@ -56,7 +56,7 @@
 									       	case 'banner':
 											   $post =  (get_sub_field('select_banner'));
 											   setup_postdata($post);
-											   echo '<a href="'.get_the_excerpt($post).'" class="banner img-responsive">' . get_the_post_thumbnail(get_the_ID(), 'full', array( 'class' => 'img-responsive' )) . '</a>';
+											   echo '<a href="'.get_the_excerpt().'" class="banner img-responsive">' . get_the_post_thumbnail(get_the_ID(), 'full', array( 'class' => 'img-responsive' )) . '</a>';
 										        break;
 										    case 'story':
 										    $post =  (get_sub_field('select_story'));
@@ -66,7 +66,7 @@
 												if ($posttags) {
 													echo '<ul class="tags">';
 												  foreach($posttags as $tag) {
-												    echo '<li><a href="'.get_site_url().'/'.$tag->slug.'">'.$tag->name . '</a></li>';
+												    echo '<li><a href="'.get_tag_link($tag->term_id).'">'.$tag->name . '</a></li>';
 												  }
 												}
 												echo '<a href="#"><p class="quote">„Ebistiunt apis net dem qui offic aboria delluptatem remod quibus”</p></a>
@@ -109,7 +109,7 @@
 										<li class="">
 											<?php echo (get_the_post_thumbnail(get_the_ID(), array(154,154), array( 'class' => 'pull-left img-responsive' )));?>
 											<div class="details"><h4><?php echo get_the_title();?></h4>
-											<h5><?php echo get_the_excerpt($post);?></h5>
+											<h5><?php echo get_the_excerpt();?></h5>
 											<a href="#">View More</a></div>
 											<div class="clearfix"></div>
 										</li>
@@ -133,29 +133,7 @@
 									 $rel_posts = new WP_Query($newargs);
 									  if($rel_posts->have_posts()) :
 								  while ($rel_posts->have_posts()) : $rel_posts->the_post();?>
-								  <li class="story-thumb  col-sm-4">
-											<a class="thumb transition-fast" href="<?php the_permalink()?>" style="background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-thumbnail' );
-												echo $thumb['0'];?>)"></a>
-											<a href="<?php the_permalink()?>" class="qlink"><p class="quote transition-fast">
-												<?php if( have_rows('quote') ):
-													while ( have_rows('quote') ) : the_row();
-													        the_sub_field('quote_text');
-															$post_ob = get_sub_field('person');
-															echo "<span>".($post_ob->post_title)."</span>";
-													    endwhile;
-													endif;
-												?></p></a>
-											<?php	the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
-											<a href="<?php the_permalink()?>">
-												<h2><?php the_title();?></h2>
-<!-- 												<p class="excerpt"><?php echo get_the_excerpt();?></p> -->
-												<?php echo the_excerpt();?>
-											</a>
-											<aside class="like-meter">
-												<i class="fa fa-facebook-official"></i> 136 &nbsp;&nbsp;
-												<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
-											</aside>
-										</li>
+								  <?php get_template_part('parts/part', 'thumbnail');?>
 								  <?php
 																endwhile;
 								  endif;

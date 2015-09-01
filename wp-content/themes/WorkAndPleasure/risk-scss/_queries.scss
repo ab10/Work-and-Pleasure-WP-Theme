@@ -10,16 +10,17 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-	header {padding-top: 40px; margin-bottom: 25px; .head-nav{position: relative; ul {display: flex; li {display: inline;}}}}
+	header {padding-top: 40px; margin-bottom: 25px; .head-nav{ul {display:block; li {display: inline-block;}}}}
 	.home-text {width: 45%; margin-left: -22.5%;}
-	.squares-wrapper {display: flex; }
 	.set-wrapper {
 		height: 206px;
 		&.set1 {
 			max-width: 220px;
+			margin-right: 47px;
 		}
 		&.set2 {
 			max-width: 220px;
+		    margin-right: 47px;
 			.square {width: 50%;}
 		}
 		&.set3 {
@@ -31,7 +32,7 @@
 		display: table-cell;
 	}
 	.time-fixed-top{top: 36px;}
-	.timeline {border-bottom: 0; p {font-size: 140%;  display: inline-block; text-align: left;&.the-line {width: 50%; margin-bottom: 0px; }}}
+	.timeline {border-bottom: 0; top: 56px; p {font-size: 140%;  display: inline-block; text-align: left;&.the-line {width: 50%; margin-bottom: 0px; }}}
 	.credits {  padding: 8px 0px; p {margin: 12px 0 22px; display: inline;}}
 	.ppl-links {
 		ul li {

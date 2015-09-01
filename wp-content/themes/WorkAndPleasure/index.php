@@ -8,7 +8,11 @@
  * @since Risk
  **/
 
-get_header(); ?>
-asdsad
+get_header();
+/*
+echo '<pre>';
+print_r ($wp_query);
+echo '</pre>';
+*/?>
 <?php
 get_footer();

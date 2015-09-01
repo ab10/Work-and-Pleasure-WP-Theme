@@ -9,7 +9,7 @@
  */
 ?>
 </section>
-<?php get_search_form(); ?>
+
 <footer>
 	<div class="container ">
 		<p class="copyrights pull-left">All content © Risk Made In Warsaw 2014</p>

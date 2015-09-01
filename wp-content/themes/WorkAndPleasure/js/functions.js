@@ -9,9 +9,10 @@ $(window).load(function () {
 		e.preventDefault();
 		//Get clicked URL
 		$('#main').addClass("get-out");
-		href = ($(this).find("a").attr("href"));
+		href = ($(this).attr("href"));
 		$("body").animate({ scrollTop: "0px" }, {"duration": 700, "easing":"easeInOutCubic", complete: function () {
 			$('.loader').fadeIn();
+			console.log("a = "+ href)
 			getNewMain(href);
 		}});
 
@@ -61,25 +62,26 @@ function setHomeQuote (obj) {
 	})
 }
 var navTop = ($('.head-nav').offset().top);
-if ($('.timeline').length) {var timeTop = $('.timeline').offset().top-$('.timeline').outerHeight()-0;}
-$( window ).scroll(function() {
-	if ($(window).scrollTop() > navTop) {
-		$('.head-nav').addClass('navbar-fixed-top'); $('body').css('padding-top', '45px');
-		if ($('.timeline').length) {
-			if ($(window).scrollTop() > timeTop) {
-				$('.timeline').addClass('time-fixed-top'); $('body').css({'padding-top': '105px', "padding-bottom":"80px"});
-			} else if ($(window).scrollTop() < timeTop) {
-				$('.timeline').removeClass('time-fixed-top'); $('body').css({'padding-top': '45px', "padding-bottom":"0px"});
-			}
-		}
-	} else if ($(window).scrollTop() < navTop) {
-		$('.head-nav').removeClass('navbar-fixed-top'); $('body').css('padding-top', '0px')
-	}
-
-
-	var percentage = ($(window).scrollTop()  )/ ( $(document).height()-$(window).height());
-	$('.the-scrubber').css({"right": percentage * ($('.the-line').outerWidth()) })
+$('.head-nav').affix({
+  offset: {
+    top: $('.head-nav').offset().top-10
+  }
 });
+
+$('.timeline').affix({
+  offset: {
+    top: $('.timeline').offset().top-10-$('.head-nav').height()
+  }
+});
+
+
+$( window ).scroll(function() {
+		if ($('.timeline').length) {
+		var percentage = ($(window).scrollTop()  )/ ( $(document).height()-$(window).height());
+		$('.the-scrubber').css({"right": percentage * ($('.the-line').outerWidth()) })
+	}
+});
+
 
 $( ".the-scrubber" ).draggable({
   drag: function() {///$('.the-line').width()
@@ -94,17 +96,24 @@ $( ".the-scrubber" ).draggable({
 $(function () {
     $('a[href="#search"]').on('click', function(event) {
         event.preventDefault();
+        $('#main').append('<div id="search"><button type="button" class="close">×</button><form method="get"  id="seachform" action="http://risk.com/search/"><input type="text" name="search" id="searchstring" placeholder="type keyword(s) here" /><input type="submit" class="btn btn-primary"  value="Search"></form></div>');
+        $('#search > form > input[type="text"]').focus();
         $('#search').addClass('open');
-        $('#search > form > input[type="search"]').focus();
     });
-
+	$(document).on('submit', '#search form', function (e) {
+		e.preventDefault();
+		href = $('#search form').attr('action')+$('#searchstring').val();
+		$('#search').removeClass('open');
+		getNewMain(href);
+	});
     $('#search, #search button.close').on('click keyup', function(event) {
         if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-            $(this).removeClass('open');
+            $('#search').removeClass('open');
         }
     });
 });
-function getNewMain() {
+function getNewMain(href) {
+	console.log("g = "+ href)
 	$('#main').load(href + " #main > *", showContent);
 }
 function showContent() {
@@ -112,6 +121,6 @@ function showContent() {
 	history.pushState(stateObj, $(this).text(), href);
 	setTimeout(function(){$('#main').removeClass("get-out");
 	$('.loader').fadeOut("fast");; }, 500);
-
+	FB.XFBML.parse();
 }
 

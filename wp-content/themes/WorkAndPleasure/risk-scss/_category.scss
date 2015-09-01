@@ -27,15 +27,12 @@ h3 {
 	text-align: center;
 	&.hovered {
 		a.thumb img {
-			opacity: 0.4; min-width: 130%; -webkit-filter: blur(10px); -moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px); filter: blur(10px);
+			opacity: 0.4; -webkit-filter: blur(5px); -moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(5px);
    		}
 		p.quote {opacity: 1;-webkit-transition-delay: 0.05s; /* Safari */
     transition-delay: 0.05s; top:50%;
-    -ms-transform: scale(1,1) translateY(-50%); /* IE 9 */
-	    -webkit-transform: scale(1,1) translateY(-50%); /* Safari */
-	    transform: scale(1,1) translateY(-50%); /* Standard syntax */
-    span{top:0; opacity: 1; -webkit-transition-delay: 0.7s; /* Safari */
-    transition-delay: 0.7s;}}
+    span{top:0; opacity: 1; -webkit-transition-delay: 0.8s; /* Safari */
+    transition-delay: 0.8s;}}
 	}
 	a.thumb {margin-bottom: 8px;
 		background-repeat: no-repeat;
@@ -45,7 +42,7 @@ h3 {
 		display: inherit;
 		height: 220px;
 		overflow: hidden;
-		img {min-width: 100%; position: relative; min-height: 100%; height: auto;
+		img { position: relative; min-height: 100%;
 		  top: 50%;
 		  left: 50%;
 		   -webkit-transform: translate(-50%,-50%);
@@ -65,6 +62,8 @@ h3 {
 		left: 0;
 		padding: 0 40px;
 		top: 50%;
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
 		transform: translateY(-50%);
 		@include font-minion('italic');
 		font-size: 160%;
@@ -73,11 +72,8 @@ h3 {
 		width: 100%;
 		opacity: 0;
 		line-height: 140%;
-		-webkit-transition-delay: 0s; /* Safari */
-		transition-delay: 0s;
-		-ms-transform: scale(0.92,0.92) translateY(-50%); /* IE 9 */
-	    -webkit-transform: scale(0.92,0.92) translateY(-50%); /* Safari */
-	    transform: scale(0.92,0.92) translateY(-50%); /* Standard syntax */
+		-webkit-transition-delay: 0.5s; /* Safari */
+		transition-delay: 0.5s;
 		span {
 			@include font-proxima('semi');
 			font-size: 65%;
@@ -86,9 +82,9 @@ h3 {
 		}
 	}
 	h2 {
-		@include font-proxima('semi');
+		@include font-proxima('regular');
 		color: black;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		margin: 8px auto 6px;
 		text-transform: uppercase;
 	}
@@ -99,6 +95,11 @@ h3 {
 		line-height: 1rem;
 		margin-bottom: 8px;
 		padding: 2px 10px;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		height: 50px;
 	}
 }
 .tags {

@@ -95,6 +95,5 @@ function creative_ppl_posts() {
 add_action( 'init', 'creative_ppl_posts' );
 
 include_once(get_template_directory().'/inc/load_scripts.php');
-
-
+require_once(get_template_directory().'/inc/excerpt_designer.php');
 ?>

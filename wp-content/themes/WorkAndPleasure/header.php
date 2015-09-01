@@ -17,6 +17,14 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=258531367503657";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<header class="site-header">
 		<div class="top container">
 			<aside class="col-sm-2 hidden-xs"><a href="http://riskmadeinwarsaw.com" class="shop-btn pull-left">SHOP</a></aside>
@@ -44,7 +52,7 @@
 			<i class="glyphicon glyphicon-text-size" ></i>
 		</button>
 	    </div>
-		<div class="head-nav collapse navbar-collapse" role="main navigtion" id="bs-example-navbar-collapse-1">
+		<div class="head-nav collapse navbar-collapse" data-offset-top="60" role="main navigtion" id="bs-example-navbar-collapse-1">
 			<button type="button" class="close-menu collapsed visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 				<span class="sr-only">Back To Top</span>
 				<i class="fa fa-times  visible-xs" ></i>
