@@ -22,7 +22,7 @@ foreach($query_args as $key => $string) {
 $search = new WP_Query($search_query); ?>
 <?php
 global $wp_query;
-$total_results = $wp_query->found_posts;
+$total_results = $search->found_posts;
 ?>
 <header class="page-header">
 	<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyfifteen' ), get_search_query() ); ?></h1>

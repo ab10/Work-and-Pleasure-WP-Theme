@@ -28,9 +28,16 @@
 	<header class="site-header">
 		<div class="top container">
 			<aside class="col-sm-2 hidden-xs"><a href="http://riskmadeinwarsaw.com" class="shop-btn pull-left">SHOP</a></aside>
-			<h1 class="col-sm-8 col-xs-12 no-margin no-padding pull-left "><a class="logo" href="<?php echo get_site_url(); ?>">Risk - Work & Pleasure	</a></h1>
+			<h1 class="col-sm-8 col-xs-12 no-margin no-padding pull-left "><a class="logo" href="<?php echo get_site_url(); ?>">RISK made in Warsaw</a></h1>
 			<aside class="access col-sm-2 pull-right hidden-xs">
-				<a href="#search" class="fa pull-right col-sm-1 col-sm-offset-0 search-btn" style="margin-right: 0;   margin-top: 4px;">&#xf002;</a>
+				<div for="#search" class="fa pull-right col-sm-1 col-sm-offset-0 search-btn">&#xf002;
+					<div id="search" class="">
+					    <form method="get"  id="seachform" action="<?php echo get_site_url();?>/search/">
+					        <input type="text" name="search" id="searchstring" placeholder="type keyword(s) here" />
+					<!--         <input type="submit" class="btn btn-primary"  value="Search"> -->
+					    </form>
+					</div>
+				</div>
 				<div class="langswitch pull-right col-sm-6 col-sm-offset-0"><ul><?php pll_the_languages(array("display_names_as" => 'slug'));?></ul> <span class="fa" style="font-size: 12px;padding-right: 6px;">&#xf0d7;</span></div>
 			</aside>
 		</div>

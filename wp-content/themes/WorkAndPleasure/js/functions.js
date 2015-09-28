@@ -102,11 +102,13 @@ console.log(invpercent)
 });
 }
 $(function () {
-    $('a[href="#search"]').on('click', function(event) {
+    $('div[for="#search"]').on('click', function(event) {
         event.preventDefault();
+/*
         $('#main').append('<div id="search"><button type="button" class="close">×</button><form method="get"  id="seachform" action="http://risk.com/search/"><input type="text" name="search" id="searchstring" placeholder="type keyword(s) here" /><input type="submit" class="btn btn-primary"  value="Search"></form></div>');
         $('#search > form > input[type="text"]').focus();
-        $('#search').addClass('open');
+*/
+        $('#search').toggleClass('open');
     });
 	$(document).on('submit', '#search form', function (e) {
 		e.preventDefault();

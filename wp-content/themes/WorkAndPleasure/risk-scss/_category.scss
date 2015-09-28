@@ -17,7 +17,7 @@ h3 {
 	padding-bottom: 30px;
 }
 .thumb-grid {
-	display: flex;
+	display: block;
 	text-align: center;
 	width: 100%;
 }
@@ -104,14 +104,18 @@ h3 {
 }
 .tags {
 	padding: 8px 0 0;
-	margin-bottom: 12px;
-	li a {
-		background-color: #959595;
-		color: white !important;
-		@include font-proxima();
-		margin: 0 4px 0 0;
-		padding: 2px 4px;
-		text-transform: uppercase;
+	margin: 0 auto;
+	height: 26px; overflow: hidden;
+	li {
+		display: inline-block; margin-bottom: 10px;
+		a {
+			background-color: #959595;
+			color: white !important;
+			@include font-proxima();
+			margin: 0 4px 0 0;
+			padding: 2px 4px;
+			text-transform: uppercase;
+		}
 	}
 }
 .dot-irecommendthis {
