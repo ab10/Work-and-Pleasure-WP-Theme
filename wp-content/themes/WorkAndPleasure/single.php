@@ -34,7 +34,10 @@
 								<div class="credits"><p>words by <span><?php the_field('writer_credit')?></span></p>   <p>photographs by <span><?php the_field('photos_credit')?></span><span class="date pull-right"><?php the_date('j.n.Y'); ?></span></p></div>
 								<div class="clearfix"></div>
 							</header>
-							<aside class="story-icon pull-left"> <img src="<?php echo get_site_url()?>/wp-content/uploads/2015/03/cat1.jpg"> </aside>
+							<aside class="story-icon pull-left">
+								<?php $curr_cat =  get_the_category(); ?>
+								<img src="<?php echo get_field('category_image',  $curr_cat[0])?>" alt="<?php single_cat_title(); ?>">
+							</aside>
 							<div class="story-content">
 								<?php the_content();?>
 								<a class="to-top one-half no-padding text-left pull-left" style="cursor: pointer;"><i class="fa fa-caret-up"></i> Return To Top</a>
@@ -56,7 +59,7 @@
 									       	case 'banner':
 											   $post =  (get_sub_field('select_banner'));
 											   setup_postdata($post);
-											   echo '<a href="'.get_the_excerpt().'" class="banner img-responsive">' . get_the_post_thumbnail(get_the_ID(), 'full', array( 'class' => 'img-responsive' )) . '</a>';
+											   echo '<a href="'.get_the_excerpt().'" class="banner img-responsive" target="_blank">' . get_the_post_thumbnail(get_the_ID(), 'full', array( 'class' => 'img-responsive' )) . '</a>';
 										        break;
 										    case 'story':
 										    $post =  (get_sub_field('select_story'));
