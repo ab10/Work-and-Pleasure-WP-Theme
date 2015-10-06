@@ -16,6 +16,7 @@
 
 					?>
 					<header class="story-header col-xs-12">
+						hiiii
 						<?php echo get_the_post_thumbnail(get_the_ID(), 'full', array( 'class' => 'img-responsive' ));?>
 						<?php	the_tags( '<ul class="tags col-sm-10 pull-left text-left"><li>', '</li><li>', '</li></ul>' ); ?>
 						<aside class="col-sm-2 pull-right like-meter text-right">
@@ -23,7 +24,6 @@
 							<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
 						</aside>
 					</header>
-					<?php ?>
 					<div class="post-content" id="the-post">
 						<?php if (get_field('display_side_bar')) {?>
 						<article class="col-sm-8 pull-left col-xs-12">
@@ -39,7 +39,7 @@
 								<?php $curr_cat =  get_the_category(); ?>
 								<img src="<?php echo get_field('category_image',  $curr_cat[0])?>" alt="<?php single_cat_title(); ?>">
 							</aside>
-							<div class="story-content <?php if (get_field('display_side_bar')) {echo "have_side_bar";} ?>">
+							<div class="story-content">
 								<?php the_content();?>
 								<a class="to-top one-half no-padding text-left pull-left" style="cursor: pointer;"><i class="fa fa-caret-up"></i> Return To Top</a>
 								<aside class="one-half no-padding pull-right like-meter text-right">

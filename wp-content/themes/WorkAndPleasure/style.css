@@ -1929,6 +1929,10 @@ footer p {
     width: 525px;
     float: right;
   }
+  .story-content.have_side_bar {
+    width: 795px;
+    float: right;
+  }
   h1 {
     font-size: 32px;
   }
@@ -1958,6 +1962,9 @@ footer p {
   }
   .story-content {
     width: 645px;
+  }
+  .story-content.have_side_bar {
+    width: 1005px;
     float: right;
   }
 }

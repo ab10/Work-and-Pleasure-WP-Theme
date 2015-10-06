@@ -61,6 +61,7 @@
 	}
 	.home-quotes {max-width: 890px;left: 40px;  position: relative;}
 	.story-content {
+		&.have_side_bar{width: 795px; float: right;}
 		  width: 525px; float: right;
 	}
 	h1 {font-size: 32px;}
@@ -89,7 +90,8 @@
 		}
 	}
 	.story-content {
-		  width: 645px; float: right;
+		  &.have_side_bar{width: 1005px; float: right;}
+		  width: 645px;
 	}
 
 }
