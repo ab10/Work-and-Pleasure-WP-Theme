@@ -1,5 +1,6 @@
 $(window).load(function () {
 	setScrubber ();
+	setHomeQuote($('#main > section > div.home-wrapper.container > section.squares-wrapper > div.set-wrapper.set1 > div:nth-child(2)'));
 	$('.square').mouseenter(function(){
 		$square = $(this);
 		if (!$square.hasClass('tit')){
@@ -39,8 +40,6 @@ $(window).load(function () {
 		$(this).removeClass("hovered");
 	});
 
-
-	setHomeQuote($('body > section > div.home-wrapper.container > section.squares-wrapper > div.set-wrapper.set1 > div:nth-child(2)'));
 	$(".wp-caption").removeAttr('style');
 	$('.to-top').click(function () {
 		 $('body').animate({
@@ -55,6 +54,7 @@ $(window).load(function () {
 	});
 
 function setHomeQuote (obj) {
+	console.log('y')
 	$('.home-quotes .person, .panel').stop( true, true ).animate({opacity: 0}, 'fast', function () {
 		$('.home-quotes p.quote').text(obj.attr('data-quote'));
 		$('.home-quotes img').attr('src', obj.attr('data-img'));
@@ -62,6 +62,9 @@ function setHomeQuote (obj) {
 		$(this).animate({opacity: 1}, "fast");
 	})
 }
+//setHomeQuote (){
+
+//}
 var navTop = ($('.head-nav').offset().top);
 $('.head-nav').affix({
   offset: {
@@ -85,7 +88,9 @@ function setScrubber () {
 
 	$('.timeline').affix({
 	  offset: {
-	    top: $('.timeline').offset().top-$('.timeline').outerHeight()-$('.head-nav').outerHeight()
+	    top: function () {
+			return $('.timeline').offset().top-$('.timeline').outerHeight()-$('.head-nav').outerHeight()
+		}
 	  }
 	});
 	$( ".the-scrubber" ).draggable({
@@ -104,10 +109,6 @@ console.log(invpercent)
 $(function () {
     $('div[for="#search"]').on('click', function(event) {
         event.preventDefault();
-/*
-        $('#main').append('<div id="search"><button type="button" class="close">×</button><form method="get"  id="seachform" action="http://risk.com/search/"><input type="text" name="search" id="searchstring" placeholder="type keyword(s) here" /><input type="submit" class="btn btn-primary"  value="Search"></form></div>');
-        $('#search > form > input[type="text"]').focus();
-*/
         $('#search').toggleClass('open');
     });
 	$(document).on('submit', '#search form', function (e) {
