@@ -14,4 +14,3 @@ function add_class_to_excerpt( $excerpt ) {
     return str_replace('<p', '<p class="excerpt"', $excerpt);
 }
 add_filter( "the_excerpt", "add_class_to_excerpt" );
-?>

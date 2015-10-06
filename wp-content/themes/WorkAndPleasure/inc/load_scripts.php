@@ -31,5 +31,5 @@ function load_styles() {
 
 }
 add_action('wp_print_styles', 'load_styles');
-?>
+
 

@@ -170,7 +170,16 @@ footer {
 		display: inline-block;
 		float: left;
 		text-align: center;
-		img {height: 100%; width: auto; &:hover {height: 120%; margin-left: -10%; margin-top: -10%;}}
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		img {height: 100%; width: auto;
+			position: relative;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%,0%);
+			&:hover {height: 120%; transform:translate(-50%,-10%)}
+		}
 		&.tit {padding: 20px 10px; text-transform: uppercase; img {width: auto; height: auto;margin: 0 auto; &:hover{height: initial; margin: 0 auto;}}}
 	}
 }

@@ -897,17 +897,23 @@ footer {
   display: inline-block;
   float: left;
   text-align: center;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .set-wrapper .square img {
   height: 100%;
   width: auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .set-wrapper .square img:hover {
   height: 120%;
-  margin-left: -10%;
-  margin-top: -10%;
+  transform: translate(-50%, -10%);
 }
 
 .set-wrapper .square.tit {

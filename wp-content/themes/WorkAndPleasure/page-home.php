@@ -95,7 +95,7 @@ echo $feat_image;?>);">
 							    endwhile;
 							else :
 							endif; ?>'>
-					<?php echo '<a href="'. get_permalink($post->ID).'">'.(get_the_post_thumbnail(get_the_ID(), array(146,146), array( 'class' => 'transition-fast' ))).'</a>';?></div>
+					<?php echo '<a href="'. get_permalink($post->ID).'">'.(get_the_post_thumbnail(get_the_ID(), "thumbnail", array( 'class' => 'transition-fast' ))).'</a>';?></div>
 					<?php endwhile; endif; ?>
 				</div>
 						<?php $i++; } ?>
